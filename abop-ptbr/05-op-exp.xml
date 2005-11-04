@@ -1,0 +1,685 @@
+<chapter id="operators-expressions">
+	<title>Operators and Expressions</title>
+	
+	<section id="operators-expressions-intro">
+		<title>Introduction</title>
+		
+		<para>
+		
+		Most statements (logical lines) that you write will contain
+		<emphasis role="bold">expressions</emphasis>. A simple example of an expression is
+		<literal>2 + 3</literal>. An expression can be broken down into operators and operands.
+		
+		</para>
+		<para>
+		
+		<emphasis>Operators</emphasis> are functionality that do something and can be
+		represented by symbols such as <literal>+</literal> or by special keywords. Operators
+		require some data to operate on and such data are called <emphasis>operands</emphasis>.
+		In this case, <literal>2</literal> and <literal>3</literal> are the operands.
+		
+		</para>
+	</section>
+	
+	<section id="operators">
+		<title>Operators</title>
+		
+		<para>
+		
+		We will briefly take a look at the operators and their usage:
+		
+		</para>
+		<tip>
+			<para>
+			
+			You can evaluate the expressions given in the examples using the interpreter
+			interactively. For example, to test the expression <literal>2 + 3</literal>, use
+			the interactive Python interpreter prompt:
+			
+			</para>
+			<screen>
+			<![CDATA[
+>>> 2 + 3
+5
+>>> 3 * 5
+15
+>>>
+			]]>
+			</screen>
+		</tip>
+		
+		<table>
+			<title>Operators and their usage</title>
+			<tgroup cols="4">
+				<thead>
+					<row>
+						<entry>Operator</entry>
+						<entry>Name</entry>
+						<entry>Explanation</entry>
+						<entry>Examples</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry>+</entry>
+						<entry>Plus</entry>
+						<entry>
+						
+						Adds the two objects
+						
+						</entry>
+						<entry>
+						
+						<literal>3 + 5</literal> gives <literal>8</literal>.
+						<literal>'a' + 'b'</literal> gives <literal>'ab'</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry>-</entry>
+						<entry>Minus</entry>
+						<entry>
+						
+						Either gives a negative number or gives the subtraction of
+						one number from the other
+						
+						</entry>
+						<entry>
+						
+						<literal>-5.2</literal> gives a negative number.
+						<literal>50 - 24</literal> gives <literal>26</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry>*</entry>
+						<entry>Multiply</entry>
+						<entry>
+						
+						Gives the multiplication of the two numbers or returns
+						the string repeated that many times.
+						
+						</entry>
+						<entry>
+						
+						<literal>2 * 3</literal> gives <literal>6</literal>.
+						<literal>'la' * 3</literal> gives <literal>'lalala'</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry>**</entry>
+						<entry>Power</entry>
+						<entry>
+						
+						Returns x to the power of y
+						
+						</entry>
+						<entry>
+						
+						<literal>3 ** 4</literal> gives <literal>81</literal>
+						(i.e. <literal>3 * 3 * 3 * 3</literal>)
+						
+						</entry>
+					</row>
+					<row>
+						<entry>/</entry>
+						<entry>Divide</entry>
+						<entry>
+						
+						Divide x by y
+						
+						</entry>
+						<entry>
+						
+						<literal>4/3</literal> gives <literal>1</literal> (division
+						of integers gives an integer).
+						<literal>4.0/3</literal> or <literal>4/3.0</literal> gives
+						<literal>1.3333333333333333</literal>
+						
+						</entry>
+					</row>
+					<row>
+						<entry>//</entry>
+						<entry>Floor Division</entry>
+						<entry>
+						
+						Returns the floor of the quotient
+						
+						</entry>
+						<entry>
+						
+						<literal>4 // 3.0</literal> gives <literal>1.0</literal>
+						
+						</entry>
+					</row>
+					<row>
+						<entry>%</entry>
+						<entry>Modulo</entry>
+						<entry>
+						
+						Returns the remainder of the division
+						
+						</entry>
+						<entry>
+						
+						<literal>8%3</literal> gives <literal>2</literal>.
+						<literal>-25.5%2.25</literal> gives <literal>1.5</literal> .
+						
+						</entry>
+					</row>
+					<row>
+						<entry><![CDATA[<<]]></entry>
+						<entry>Left Shift</entry>
+						<entry>
+						
+						Shifts the bits of the number to the left by the number of
+						bits specified. (Each number is represented in memory by
+						bits or binary digits i.e. 0 and 1)
+						
+						</entry>
+						<entry>
+						
+						<literal><![CDATA[2 << 2]]></literal> gives
+						<literal>8</literal>.
+						- <literal>2</literal> is represented by
+						<literal>10</literal> in bits. Left shifting by 2 bits
+						gives <literal>1000</literal> which represents the
+						decimal <literal>8</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry><![CDATA[>>]]></entry>
+						<entry>Right Shift</entry>
+						<entry>
+						
+						Shifts the bits of the number to the right by the number
+						of bits specified.
+						
+						</entry>
+						<entry>
+						
+						<literal><![CDATA[11 >> 1]]></literal> gives
+						<literal>5</literal> -
+						<literal>11</literal> is represented in bits by
+						<literal>1011</literal> which when right shifted by
+						1 bit gives <literal>101</literal> which is nothing
+						but decimal <literal>5</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry><![CDATA[&]]></entry>
+						<entry>Bitwise AND</entry>
+						<entry>
+						
+						Bitwise AND of the numbers
+						
+						</entry>
+						<entry>
+						
+						<literal><![CDATA[5 & 3]]></literal> gives
+						<literal>1</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry>|</entry>
+						<entry>Bit-wise OR</entry>
+						<entry>
+						
+						Bitwise OR of the numbers
+						
+						</entry>
+						<entry>
+						
+						<literal>5 | 3</literal> gives <literal>7</literal>
+						
+						</entry>
+					</row>
+					<row>
+						<entry>^</entry>
+						<entry>Bit-wise XOR</entry>
+						<entry>
+						
+						<literal>5 ^ 3</literal> gives <literal>6</literal>
+						
+						</entry>
+					</row>
+					<row>
+						<entry>~</entry>
+						<entry>Bit-wise invert</entry>
+						<entry>
+						
+						The bit-wise inversion of x is -(x+1)
+						
+						</entry>
+						<entry>
+						
+						<literal>~5</literal> gives <literal>-6</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry><![CDATA[<]]></entry>
+						<entry>Less Than</entry>
+						<entry>
+						
+						Returns whether x is less than y. All comparison operators
+						return 1 for true and 0 for false. This is equivalent to
+						the special variables <literal>True</literal> and
+						<literal>False</literal> respectively. Note the
+						capitalization of these variables' names.
+						
+						</entry>
+						<entry>
+						
+						<literal><![CDATA[5 < 3]]></literal> gives
+						<literal>0</literal> (i.e. <literal>False</literal>) and
+						<literal><![CDATA[3 < 5]]></literal> gives
+						<literal>1</literal> (i.e. <literal>True</literal>).
+						
+						Comparisons can be chained arbitrarily:
+						<![CDATA[3 < 5 < 7]]> gives <literal>True</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry><![CDATA[>]]></entry>
+						<entry>Greater Than</entry>
+						<entry>
+						
+						Returns whether x is greater than y
+						
+						</entry>
+						<entry>
+						
+						<literal><![CDATA[5 < 3]]></literal> returns
+						<literal>True</literal>. If both operands are numbers, they
+						are first converted to a common type. Otherwise, it always
+						returns <literal>False</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry><![CDATA[<=]]></entry>
+						<entry>Less Than or Equal To</entry>
+						<entry>
+						
+						Returns whether x is less than or equal to y
+						
+						</entry>
+						<entry>
+						
+						<literal><![CDATA[x = 3; y = 6; x <= y]]></literal>
+						returns <literal>True</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry><![CDATA[>=]]></entry>
+						<entry>Greater Than or Equal To</entry>
+						<entry>
+						
+						Returns whether x is greater than or equal to y
+						
+						</entry>
+						<entry>
+						
+						<![CDATA[x = 4; y = 3; x >= 3]]> returns
+						<literal>True</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry>==</entry>
+						<entry>Equal To</entry>
+						<entry>
+						
+						Compares if the objects are equal
+						
+						</entry>
+						<entry>
+						
+						<literal>x = 2; y = 2; x == y</literal> returns
+						<literal>True</literal>.
+						
+						<literal>x = 'str'; y = 'stR'; x == y</literal> returns
+						<literal>False</literal>.
+						
+						<literal>x = 'str'; y = 'str'; x == y</literal> returns
+						<literal>True</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry>!=</entry>
+						<entry>Not Equal To</entry>
+						<entry>
+						
+						Compares if the objects are not equal
+						
+						</entry>
+						<entry>
+						
+						<literal>x = 2; y = 3; x != y</literal> returns
+						<literal>True</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry>not</entry>
+						<entry>Boolean NOT</entry>
+						<entry>
+						
+						If x is <literal>True</literal>, it returns
+						<literal>False</literal>. If x is <literal>False</literal>,
+						it returns <literal>True</literal>.
+						
+						</entry>
+						<entry>
+						
+						<literal>x = True; not y</literal> returns
+						<literal>False</literal>.
+						
+						</entry>
+					</row>
+					<row>
+						<entry>and</entry>
+						<entry>Boolean AND</entry>
+						<entry>
+						
+						<literal>x and y</literal> returns <literal>False</literal>
+						if x is <literal>False</literal>, else it returns evaluation
+						of y
+						
+						</entry>
+						<entry>
+						
+						<literal>x = False; y = True; x and y</literal> returns
+						<literal>False</literal> since x is False. In this case,
+						Python will not evaluate y since it knows that the value of
+						the expression will has to be false (since x is False).
+						This is called short-circuit evaluation.
+						
+						</entry>
+					</row>
+					<row>
+						<entry>or</entry>
+						<entry>Boolean OR</entry>
+						<entry>
+						
+						If x is <literal>True</literal>, it returns True, else it
+						returns evaluation of y
+						
+						</entry>
+						<entry>
+						
+						<literal>x = True; y = False; x or y</literal> returns
+						<literal>True</literal>. Short-circuit evaluation applies
+						here as well.
+						
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</section>
+	
+	<section id="operator-precedence">
+		<title>Operator Precedence</title>
+		
+		<para>
+		
+		If you had an expression such as <literal>2 + 3 * 4</literal>, is the addition done first
+		or the multiplication? Our high school maths tells us that the multiplication should be
+		done first - this means that the multiplication operator has higher precedence than the
+		addition operator.
+		
+		</para>
+		<para>
+		
+		The following table gives the operator precedence table for Python, from the lowest
+		precedence (least binding) to the highest precedence (most binding). This means that
+		in a given expression, Python will first evaluate the operators lower in the table
+		before the operators listed higher in the table.
+		
+		</para>
+		<para>
+		
+		The following table (same as the one in the Python reference manual) is provided for the
+		sake of completeness. However, I advise you to use parentheses for grouping of operators
+		and operands in order to explicitly specify the precedence and to make the program as
+		readable as possible. For example, <literal>2 + (3 * 4)</literal> is definitely more clearer
+		than <literal>2 + 3 * 4</literal>. As with everything else, the parentheses shold be used
+		sensibly and should not be redundant (as in <literal>2 + (3 + 4)</literal>).
+		
+		</para>
+		<table>
+			<title>Operator Precedence</title>
+			<tgroup cols="2">
+				<thead>
+					<row>
+						<entry>Operator</entry>
+						<entry>Description</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry>lambda</entry>
+						<entry>Lambda Expression</entry>
+					</row>
+					<row>
+						<entry>or</entry>
+						<entry>Boolean OR</entry>
+					</row>
+					<row>
+						<entry>and</entry>
+						<entry>Boolean AND</entry>
+					</row>
+					<row>
+						<entry>not x</entry>
+						<entry>Boolean NOT</entry>
+					</row>
+					<row>
+						<entry>in, not in</entry>
+						<entry>Membership tests</entry>
+					</row>
+					<row>
+						<entry>is, is not</entry>
+						<entry>Identity tests</entry>
+					</row>
+					<row>
+						<entry><![CDATA[<, <=, >, >=, !=, ==]]></entry>
+						<entry>Comparisons</entry>
+					</row>
+					<row>
+						<entry>|</entry>
+						<entry>Bitwise OR</entry>
+					</row>
+					<row>
+						<entry>^</entry>
+						<entry>Bitwise XOR</entry>
+					</row>
+					<row>
+						<entry><![CDATA[&]]></entry>
+						<entry>Bitwise AND</entry>
+					</row>
+					<row>
+						<entry><![CDATA[<<, >>]]></entry>
+						<entry>Shifts</entry>
+					</row>
+					<row>
+						<entry>+, -</entry>
+						<entry>Addition and subtraction</entry>
+					</row>
+					<row>
+						<entry>*, /, %</entry>
+						<entry>Multiplication, Division and Remainder</entry>
+					</row>
+					<row>
+						<entry>+x, -x</entry>
+						<entry>Positive, Negative</entry>
+					</row>
+					<row>
+						<entry>~x</entry>
+						<entry>Bitwise NOT</entry>
+					</row>
+					<row>
+						<entry>**</entry>
+						<entry>Exponentiation</entry>
+					</row>
+					<row>
+						<entry>x.attribute</entry>
+						<entry>Attribute reference</entry>
+					</row>
+					<row>
+						<entry>x[index]</entry>
+						<entry>Subscription</entry>
+					</row>
+					<row>
+						<entry>x[index:index]</entry>
+						<entry>Slicing</entry>
+					</row>
+					<row>
+						<entry>f(arguments ...)</entry>
+						<entry>Function call</entry>
+					</row>
+					<row>
+						<entry>(expressions, ...)</entry>
+						<entry>Binding or tuple display</entry>
+					</row>
+					<row>
+						<entry>[expressions, ...]</entry>
+						<entry>List display</entry>
+					</row>
+					<row>
+						<entry>{key:datum, ...}</entry>
+						<entry>Dictionary display</entry>
+					</row>
+					<row>
+						<entry>`expressions, ...`</entry>
+						<entry>String conversion</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		
+		<para>
+		
+		The operators which we have not already come across will be explained in later chapters.
+		
+		</para>
+		<para>
+		
+		Operators with the same <emphasis>same precedence</emphasis> are listed in the same row
+		in the above table. For example, <literal>+</literal> and <literal>-</literal> have the
+		same precedence.
+		
+		</para>
+		<section id="order-of-evaluation">
+			<title>Order of Evaluation</title>
+			
+			<para>
+			
+			By default, the operator precedence table decides which operators are evaluated
+			before others. However, if you want to change the orer in which they are
+			evaluated, you can use parentheses. For example, if you want addition to be
+			evaluated before multiplication in an expression, then you can write something
+			like <literal>(2 + 3) * 4</literal>.
+			
+			</para>
+		</section>
+		<section id="associativity">
+			<title>Associativity</title>
+			
+			<para>
+			
+			Operators are usually associated from left to right i.e. operators with same
+			precedence are evaluated in a left to right manner. For example,
+			<literal>2 + 3 + 4</literal> is evaluated as
+			<literal>(2 + 3) + 4</literal>. Some operators like assignment operators have
+			right to left associativity i.e. <literal>a = b = c</literal> is treated as
+			<literal>a = (b = c)</literal>.
+			
+			</para>
+		</section>
+	</section>
+	
+	<section id="expressions">
+		<title>Expressions</title>
+		
+		<section id="using-expressions">
+			<title>Using Expressions</title>
+			
+			<example>
+				<title>Using Expressions</title>
+				<programlisting>
+				<![CDATA[
+#!/usr/bin/python
+# Filename: expression.py
+
+length = 5
+breadth = 2
+
+area = length * breadth
+print 'Area is', area
+print 'Perimeter is', 2 * (length + breadth)
+				]]>
+				</programlisting>
+			</example>
+			
+			<section>
+				<title>Output</title>
+				<screen>
+				<![CDATA[
+$ python expression.py
+Area is 10
+Perimeter is 14
+				]]>
+				</screen>
+			</section>
+
+			<section>
+				<title>How It Works</title>
+				
+				<para>
+				
+				The length and breadth of the rectangle are stored in variables by the
+				same name. We use these to calculate the area and perimieter of the
+				rectangle with the help of expressions. We store the result of the
+				expression <literal>length * breadth</literal> in the variable
+				<varname>area</varname> and then print it using the <literal>print</literal>
+				statement. In the second case, we directly use the value of the expression
+				<literal>2 * (length + breadth)</literal> in the print statement.
+				
+				</para>
+				<para>
+				
+				Also, notice how Python 'pretty-prints' the output. Even though we have not
+				specified a space between <literal>'Area is'</literal> and the variable
+				<varname>area</varname>, Python puts it for us so that we get a clean nice
+				output and the program is much more readable this way (since we don't need
+				to worry about spacing in the output). This is an example of how Python
+				makes life easy for the programmer.
+				
+				</para>
+			</section>
+			
+		</section>
+	</section>
+	
+	<section id="operators-expressions-summary">
+		<title>Summary</title>
+		
+		<para>
+		
+		We have seen how to use operators, operands and expressions - these are the basic
+		building blocks of any program. Next, we will see how to make use of these in our
+		programs using statements.
+		
+		</para>
+	</section>
+	
+</chapter>

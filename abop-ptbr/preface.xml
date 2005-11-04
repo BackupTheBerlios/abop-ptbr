@@ -1,0 +1,172 @@
+<preface id="preface">
+	<title>Prefácio<!--Preface--></title>
+	
+	<para>
+	
+  Python é, provavelmente, uma das poucas linguagens de programação que
+  é, ao mesmo tempo, simples e poderosa. Isto é bom tanto para iniciantes
+  quanto para experts e, mais importante, é divertida de programar. Este livro
+  tem o objetivo de ajudá-lo a aprender esta maravilhosa linguagem e mostrar
+  como fazer as coisas de maneira rápida e indolor - de fato "o antídoto
+  perfeito para seus problemas de programação".
+  
+    <!--Python is probably one of the few programming languages which is both
+        simple and powerful. This is good for both and beginners as well as
+	experts, and more importantly, is fun to program with. This book aims
+	to help you learn this wonderful language and show how to get things
+	done quickly and painlessly - in effect 'The Perfect Anti-venom to your
+	programming problems'.-->
+	</para>
+
+	<section id="who-this-book-is-for">
+		<title>Quem Deve Ler Este Livro<!--Who This Book Is For--></title>
+		<para>
+		Este livro serve como guia ou tutorial para a linguagem de
+    programação Python e é destinado pricipalmente a iniciantes, podendo ser
+    útil também para programadores experientes.
+    
+    <!--This book serves as a guide or tutorial to the Python programming
+	language. It is mainly targeted at newbies. It is useful for experienced
+	programmers as well.-->
+		</para>
+		<para>
+	A finalidade é que você possa aprender Python com este livro, mesmo
+    que tudo o que você saiba sobre computadores seja como salvar arquivos de
+    texto. Se você tem alguma experiência prévia com programação, também será
+    possível aprender Python através deste livro.
+    
+    <!--The aim is that if all you know about computers is how to save text files, then you can learn Python from this book. If you have previous programming experience, then you can also learn Python from this book.-->
+		</para>
+		<para>
+		Se você tem experiência anterior com programação, pode estar
+    interessado nas diferenças entre Python e sua linguagem de programação
+    predileta. Eu destaquei algumas dessas diferenças. Entretanto, um pequeno
+    aviso: Python logo irá se tornar sua linguagem de programação favorita!
+    OB
+    <!--If you do have previous programming experience, you will be interested in the differences between Python and your favorite programming language - I have highlighted many such differences. A little warning though, Python is soon going to become your favorite programming language!-->
+		</para>
+	</section>
+	
+	<section id="history-lesson">
+		<title>Aula de História<!--History Lesson--></title>
+		
+		<para>
+		Iniciei com Python quando precisei escrever um instalador para meu software <ulink url="http://www.g2swaroop.net/software/">Diamond</ulink> de
+    modo que pudesse tornar a instalação fácil. Tive que escolher entre os
+    bindings de Python e Perl para a biblioteca Qt. Fiz uma pequena pesquisa
+    na web e encontrei um artigo no qual Eric S. Raymond, o famoso e
+    respeitado hacker, falava sobre como Python se tornou sua linguagem de
+    programação favorita. Também descobri que os bindings PyQt eram muito
+    bons, comparados com o Perl-Qt. Então, decidi que Python era a linguagem
+    para mim.
+			<!--I first started with Python when I needed to write an installer for my software <ulink url="http://www.g2swaroop.net/software/">Diamond</ulink> so that I could make the installation easy. I had to choose between Python and Perl bindings for the Qt library. I did some research on the web and I came across an article where Eric S. Raymond, the famous and respected hacker, talked about how Python has become his favorite programming language. I also found out that the PyQt bindings were very good compared to Perl-Qt. So, I decided that Python was the language for me.-->
+		</para>
+		<para>
+		Comecei a procurar por um bom livro sobre Python. Não conseguia
+    achar nenhum! Encontrei alguns livros da O'Reilly, mas eles ou eram muito
+    caros ou estavam mais para manuais de referência que para guias. Então,
+    decidi ficar com a documentação que veio com o Python. No entanto, ela era
+    muito curta e superficial. Dava uma boa idéia sobre Python, mas não era
+    completa. Consegui me virar com ela, uma vez que tinha experiência com
+    programação, mas ela era inadequada para novatos.
+			<!--Then, I started searching for a good book on Python. I couldn't find any! I did find some O'Reilly books but they were either too expensive or were more like a reference manual than a guide. So, I settled for the documentation that came with Python. However, it was too brief and small. It did give a good idea about Python but was not complete. I managed with it since I had previous programming experience, but it was unsuitable for newbies.-->
+		</para>
+		<para>
+		Cerca de seis meses após meu primeiro contato com Python, instalei a versão mais recente (até então) do Red Hat Linux 9.0 e estava brincando  com o KWord. Fiquei animado e, repentinamente, veio a idéia de escrever alguma coisa sobre Python. Comecei a escrevendo algumas páginas, mas rapidamente o texto ficou com trinta páginas. Então, resolvi levar a sério o propósito de torná-lo mais útil colocando-o em formato de livro. Depois  de reescrevê-lo <emphasis>muitas </emphasis> vezes, cheguei a um estágio em que o texto tinha se tornado um guia útil para o aprendizado de Python. Considero este livro minha contribuição e tributo à comunidade open source.
+
+			<!--About six months after my first brush with Python, I installed the (then) latest Red Hat 9.0 Linux and I was playing around with KWord. I got excited about it and suddenly got the idea of writing some stuff on Python. I started writing a few pages but it quickly became 30 pages long. Then, I became serious about making it more useful in a book form. After a <emphasis>lot</emphasis> of rewrites, it has reached a stage where it has become a useful guide to learning the Python language. I consider this book to be my contribution and tribute to the open source community.-->
+		</para>
+		<para>
+		Este livro começou como notas pessoais sobre Python e ainda continuo considerando-o da mesma maneira, embora tenha me esforçado bastante para torná-lo palatável para os outros :) 
+			<!--This book started out as my personal notes on Python and I still consider it in the same way, although I've taken a lot of effort to make it more palatable to others :)-->
+		</para>
+		<para>
+                No genuíno espírito open source, recebi muitas sugestões construtivas, críticas e <link linkend="feedback">feedback</link> de leitores entusiasmados, o que me ajudou bastante a melhorar este livro.
+                
+			<!--In the true spirit of open source, I have received lots of constructive suggestions, criticisms and <link linkend="feedback">feedback</link> from enthusiastic readers which has helped me improve this book a lot.-->
+		</para>
+	</section>
+	
+	<section id="status">
+		<title>Status do Livro<!--Status of the book--></title>
+		
+		<para>
+                Este livro é um <emphasis>trabalho em andamento</emphasis>. Muitos capítulos estão constantemente sendo modificados e aperfeiçoados. Entretanto, o livro amadureceu bastante. Você será capaz de aprender Python com facilidade através dele. Por favor, me informe se você achar que qualquer parte deste livro esteja incorreta ou incompreensível.
+                
+			<!--This book is a <emphasis role="bold">work-in-progress</emphasis>. Many chapters are constantly being changed and improved. However, the book has matured a lot. You should be able to learn Python easily from this book. Please do tell me if you find any part of the book to be incorrect or incomprehensible.-->
+		</para>
+		<para>
+                Mais capítulos estão planejados para o futuro, com assuntos tais como wxPython, Twisted e talvez até Boa Constructor.
+                
+			<!--More chapters are planned for the future, such as on wxPython, Twisted and maybe even Boa Constructor.-->
+		</para>
+	</section>
+	
+	<section id="official-website">
+		<title>Site Oficial<!--Official Website--></title>
+		
+		<para>
+                O site oficial do livro é <ulink url="http://www.byteofpython.info">www.byteofpython.info</ulink>. Atráves do site, você poderá ler o livro online, baixar as versões mais recentes ou ainda enviar seu feedback.
+            
+			<!--The official website of the book is <ulink url="http://www.byteofpython.info">www.byteofpython.info</ulink> . From the website, you can read the whole book online or you can download the latest versions of the book, and also send me feedback.-->
+		</para>
+	</section>
+	
+	<section id="license">
+		<title>Termos da Licença<!--License Terms--></title>
+		
+		<para>
+                Este livro está licenciando sob os termos da <ulink url="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons Attribution-NonCommercial-ShareAlike License 2.0</ulink> 
+                
+			<!--This book is licensed under the <ulink
+			url="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons
+			Attribution-NonCommercial-ShareAlike License 2.0</ulink> .-->
+		</para>
+		<para>
+                Isto significa que, basicamente, você é livre para copiar, distribuir e exibir o livro, desde que eu seja mencionado nos créditos. As restrições são que você não pode usar o livro para fins comerciais sem minha permissão. Você é livre para modificar e evoluir este trabalho, com a ressalva de que todas as mudanças estejam claramente sinalizadas e o trabalho modificado seja lançado sob a mesma licença deste livro.
+                
+			<!--Basically, you are free to copy, distribute, and display the book, as long as you give credit to me. The restrictions are that you cannot use the book	for commercial purposes without my permission. You are free to modify and build upon this work, provided that you clearly mark all changes and release the modified work under the same license as this book.-->
+		</para>
+		<para>
+                Por favor visite o <ulink url="http://creativecommons.org/licenses/by-nc-sa/2.0/">site da Creative Commons</ulink> para ter acesso ao texto completo da licença ou para uma versão de fácil compreensão. Existe até uma história em quadrinhos explicando os termos da licença.
+
+<!--Please visit the <ulink url="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons website</ulink> for the full and exact text of the license, or for an easy-to-understand version. There is even a comic strip explaining the terms of the license.-->
+		</para>
+	</section>
+	
+	<section id="feedback">
+		<title>Feedback<!--Feedback--></title>
+		
+		<para>
+                Esforcei-me bastante para fazer este livro o mais interessante e preciso quanto foi possível. Todavia, se você achar algum assunto inconsistente, incorreto ou que simplesmente precise de melhoria, por favor me informe para que eu possa efetuar os ajustes necessários.
+
+<!--I have put in a lot of effort to make this book as interesting and as accurate as possible. However, if you find some material to be inconsistent or incorrect, or simply needs improvement, then please do inform me, so that I can make suitable improvements. You can reach me at <email>swaroop@byteofpython.info</email> .-->
+		</para>
+	</section>
+	
+	<section id="something-to-think-about">
+		<title>Algo Para Pensar<!--Something To Think About--></title>
+		
+		<blockquote>
+			<attribution>C. A. R. Hoare</attribution>
+			<para>
+                        Existem duas maneiras de construir um projeto de software: uma delas é torná-lo tão simples a ponto de que, obviamente, não haja deficiências; a outra é torná-lo tão complicado a ponto de não haver deficiências óbvias.
+
+<!--There are two ways of constructing a software design: one way is to
+make it so simple that there are obviously no deficiencies; the other
+is to make it so complicated that there are no obvious deficiencies.-->
+
+</para>
+		</blockquote>
+		
+		<blockquote>
+			<attribution>C. W. Wendte</attribution>
+			<para>Ser bem sucedido na vida é menos uma questão de talento e oportunidade que de concentração e perseverança.
+
+<!--Success in life is a matter not so much of talent and opportunity as
+of concentration and perseverance.-->
+
+</para>
+		</blockquote>
+	</section>
+</preface>

@@ -1,0 +1,408 @@
+<chapter id="first-steps">
+	<title>First Steps</title>
+	
+	<section id="first-steps-intro">
+		<title>Introduction</title>
+		<para>
+		
+		We will now see how to run a traditional 'Hello World' program in Python. This will
+		teach you how to write, save and run Python programs.
+		
+		</para>
+		<para>
+		
+		There are two ways of using Python to run your program - using the interactive
+		interpreter prompt or using a source file. We will now see how to use both the methods.
+		
+		</para>
+	</section>
+	<section id="interpreter-prompt">
+		<title>Using the interpreter prompt</title>
+		<para>
+		
+		Start the intepreter on the command line by entering <command>python</command> at the
+		shell prompt. Now enter <literal>print 'Hello World'</literal> followed by the
+		<keycap>Enter</keycap> key. You should see the words
+		<computeroutput>Hello World</computeroutput> as output.
+		
+		</para>
+		<para>
+		
+		For Windows users, you can run the interpreter in the command line if you have set
+		the <envar>PATH</envar> variable appropriately. Alternatively, you can use the
+		<acronym>IDLE</acronym> program. IDLE is short for Integrated DeveLopment Environment.
+		Click on <guimenu>Start</guimenu> -> <guisubmenu>Programs</guisubmenu> ->
+		<guisubmenu>Python 2.3</guisubmenu> -> <guisubmenu>IDLE (Python GUI)</guisubmenu>.
+		Linux users can use IDLE too.
+		
+		</para>
+		<para>
+		
+		Note that the <![CDATA[<<<]]> signs are the prompt for entering Python statements.
+		
+		</para>
+		<example>
+			<title>Using the python interpreter prompt</title>
+			<screen>
+			<![CDATA[
+$ python
+Python 2.3.4 (#1, Oct 26 2004, 16:42:40)
+[GCC 3.4.2 20041017 (Red Hat 3.4.2-6.fc3)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print 'hello world'
+hello world
+>>>
+			]]>
+			</screen>
+		</example>
+		<para>
+		
+		Notice that Python gives you the output of the line immediately! What you just entered
+		is a single Python <emphasis>statement</emphasis>. We use <literal>print</literal>
+		to (unsurprisingly) print any value that you supply to it. Here, we are supplying the
+		text <literal>Hello World</literal> and this is promptly printed to the screen.
+		
+		</para>
+		<important>
+			<title>How to quit the Python prompt</title>
+			<para>
+			
+			To exit the prompt, press
+			<keycombo><keycap>Ctrl</keycap><keycap>d</keycap></keycombo>
+			if you are using IDLE or are using a Linux/BSD shell. In case of the Windows
+			command prompt, press <keycombo><keycap>Ctrl</keycap><keycap>z</keycap></keycombo>
+			followed by <keycap>Enter</keycap>.
+			
+			</para>
+		</important>
+	</section>
+	<section id="choosing-an-editor">
+		<title>Choosing an Editor</title>
+		<para>
+		
+		Before we move on to writing Python programs in source files, we need an editor
+		to write the source files. The choice of an editor is crucial indeed.  You have
+		to choose an editor as you would choose a car you would buy. A good editor will
+		help you write Python programs easily, making your journey more comfortable and
+		helps you reach your destination (achieve your goal) in a much faster and safer
+		way.
+		
+		</para>
+		<para>
+		
+		One of the very basic requirements is <emphasis role="bold">syntax
+		highlighting</emphasis> where all the different parts of your Python program are
+		colorized so that you can <emphasis>see</emphasis> your program and visualize its
+		running.
+		
+		</para>
+		<para>
+		
+		If you are using Windows, then I suggest that you use IDLE. IDLE does syntax highlighting
+		and a lot more such as allowing you to run your programs within IDLE among other things.
+		A special note: <emphasis role="bold">don't use Notepad</emphasis> - it is a bad choice
+		because it does not do syntax highlighting and also importantly it does not support
+		indentation of the text which is very important in our case as we will see later. Good
+		editors such as IDLE (and also VIM) will automatically help you do this.
+		
+		</para>
+		<para>
+		
+		If you are using Linux/FreeBSD, then you have a lot of choices for an editor. If you are
+		an experienced programmer, then you must be already using <application>VIM</application>
+		or <application>Emacs</application>. Needless to say, these are two of the most powerful
+		editors and you will be benefitted by using them to write your Python programs. I
+		personally use <application>VIM</application> for most of my programs. If you are a
+		beginner programmer, then you can use <application>Kate</application> which is one of my
+		favorites. In case you are willing to take the time to learn VIM or Emacs, then I highly
+		recommend that you do learn to use either of them as it will be very useful for you in
+		the long run.
+		
+		</para>
+		<para>
+		
+		If you still want to explore other choices of an editor, see the comprehensive
+		<ulink url="http://www.python.org/cgi-bin/moinmoin/PythonEditors">list of Python
+		editors</ulink> and make your choice. You can also choose an
+		<acronym>IDE</acronym> (Integrated Development Environment) for Python. See the
+		comprehensive <ulink
+		url="http://www.python.org/cgi-bin/moinmoin/IntegratedDevelopmentEnvironments"
+		>list of IDEs that support Python</ulink> for more details. Once you start writing
+		large Python programs, IDEs can be very useful indeed.
+		
+		</para>
+		<para>
+		
+		I repeat once again, please choose a proper editor - it can make writing Python
+		programs more fun and easy.
+		
+		</para>
+	</section>
+	<section id="source-file">
+		<title>Using a Source File</title>
+		
+		<para>
+		
+		Now let's get back to programming. There is a tradition that whenever you learn a new
+		programming language, the first program that you write and run is the 'Hello World'
+		program - all it does is just say 'Hello World' when you run it. As Simon Cozens
+		<footnote>
+			<para>
+			one of the leading Perl6/Parrot hackers and the author of the amazing
+			'Beginning Perl' book
+			</para>
+		</footnote>
+		puts it, it is the 'traditional incantation to the programming gods to help you learn
+		the language better' :) .
+		
+		</para>
+		<para>
+		
+		Start your choice of editor, enter the following program and save it as
+		<filename>helloworld.py</filename>
+		
+		</para>
+		<example>
+			<title>Using a Source File</title>
+			<programlisting>
+			<![CDATA[
+#!/usr/bin/python
+# Filename : helloworld.py
+print 'Hello World'
+			]]>
+			</programlisting>
+			<para>
+				(Source file: <ulink url="code/helloworld.py">code/helloworld.py</ulink>)
+			</para>
+		</example>
+		<para>
+		
+		Run this program by opening a shell (Linux terminal or DOS prompt) and entering the
+		command <command>python <replaceable>helloworld.py</replaceable></command>. If you
+		are using IDLE, use the menu <guimenu>Edit</guimenu> ->
+		<guimenuitem>Run Script</guimenuitem> or the keyboard shortcut
+		<keycombo><keycap>Ctrl</keycap><keycap>F5</keycap></keycombo>. The output is as shown
+		below.
+		
+		</para>
+		<section>
+			<title>Output</title>
+			<screen>
+			<![CDATA[
+$ python helloworld.py
+Hello World
+			]]>
+			</screen>
+		</section>
+		<para>
+		
+		If you got the output as shown above, congratulations! - you have successfully run your
+		first Python program.
+		
+		</para>
+		<para>
+		
+		In case you got an error, please type the above program <emphasis>exactly</emphasis> as
+		shown and above and run the program again. Note that Python is case-sensitive i.e.
+		<literal>print</literal> is not the same as <literal>Print</literal> - note the
+		lowercase <literal>p</literal> in the former and the uppercase <literal>P</literal> in
+		the latter. Also, ensure there are no spaces or tabs before the first character in each
+		line - we will see why this is important later.
+		
+		</para>
+		
+		<section>
+			<title>How It Works</title>
+			<para>
+			
+			Let us consider the first two lines of the program. These are called
+			<emphasis>comments</emphasis> - anything to the right of the <literal>#</literal>
+			symbol is a comment and is mainly useful as notes for the reader of the program.
+			
+			</para>
+			<para>
+			
+			Python does not use comments except for the special case of the first line here.
+			It is called the <emphasis>shebang line</emphasis> - whenever the first two
+			characters of the source file are <literal>#!</literal> followed by the location
+			of a program, this tells your Linux/Unix system that this program should be run
+			with this interpreter when you <emphasis>execute</emphasis> the program. This is
+			explained in detail in the <link linkend="executable-python-programs"
+			>next section</link>. Note that you can always run the program on any platform by
+			specifying the interpreter directly on the command line such as the command
+			<command>python <replaceable>helloworld.py</replaceable></command> .
+			
+			</para>
+			<important>
+				<para>
+				
+				Use comments sensibly in your program to explain some important details
+				of your program - this is useful for readers of your program so that they
+				can easily understand what the program is doing. Remember, that person
+				can be yourself after six months!
+				
+				</para>
+			</important>
+			
+			<para>
+			
+			The comments are followed by a Python <emphasis>statement</emphasis> - this just
+			prints the text <literal>'Hello World'</literal>. The <literal>print</literal>
+			is actually an operator and <literal>'Hello World'</literal> is referred to as a
+			string - don't worry, we will explore these terminologies in detail later.
+			
+			</para>
+		</section>
+	</section>
+	<section id="executable-python-programs">
+		<title>Executable Python programs</title>
+		<para>
+		
+		This applies only to Linux/Unix users but Windows users might be curious as well
+		about the first line of the program. First, we have to give the program executable
+		permission using the <command>chmod</command> command then <emphasis>run</emphasis>
+		the source program.
+		
+		</para>
+		<screen>
+		<![CDATA[
+$ chmod a+x helloworld.py
+$ ./helloworld.py
+Hello World
+		]]>
+		</screen>
+		<para>
+		
+		The chmod command is used here to <emphasis>ch</emphasis>ange the
+		<emphasis>mod</emphasis>e of the file by giving e<emphasis>x</emphasis>ecute
+		permission to <emphasis>a</emphasis>ll users of the system. Then, we execute the
+		program directly by specifying the location of the source file. We use the
+		<literal>./</literal> to indicate that the program is located in the current
+		directory.
+		
+		</para>
+		<para>
+		
+		To make things more fun, you can rename the file to just <filename>helloworld</filename>
+		and run it as <command>./helloworld</command> and it will still work since the system
+		knows that it has to run the program using the interpreter whose location is specified
+		in the first line in the source file.
+		
+		</para>
+		<para>
+		
+		You are now able to run the program as long as you know the exact path of the program
+		- but what if you wanted to be able to run the program from anywhere? You can do this
+		by storing the program in one of the directories listed in the <envar>PATH</envar>
+		environment variable. Whenever you run any program, the system looks for that program
+		in each of the directories listed in the <envar>PATH</envar> environment variable and
+		then runs that program. We can make this program available everywhere by simply
+		copying this source file to one of the directories listed in <envar>PATH</envar>.
+		
+		</para>
+		<screen>
+		<![CDATA[
+$ echo $PATH
+/opt/mono/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:/home/swaroop/bin
+$ cp helloworld.py /home/swaroop/bin/helloworld
+$ helloworld
+Hello World
+		]]>
+		</screen>
+		<para>
+		
+		We can display the <envar>PATH</envar> variable using the <command>echo</command>
+		command and prefixing the variable name by <literal>$</literal> to indicate to the
+		shell that we need the value of this variable. We see that
+		<filename>/home/swaroop/bin</filename> is one of the directories in the PATH variable
+		where <emphasis role="bold">swaroop</emphasis> is the username I am using in my
+		system. There will usually be a similar directory for your username on your system.
+		Alternatively, you can add a directory of your choice to the <envar>PATH</envar>
+		variable - this can be done by running
+		<command>PATH=$PATH:/home/swaroop/mydir</command> where
+		<literal>'/home/swaroop/mydir'</literal> is the directory I want to add to the
+		<envar>PATH</envar> variable.
+		
+		</para>
+		<para>
+		
+		This method is very useful if you want to write useful scripts that you want to run
+		the program anytime, anywhere. It is like creating your own commands just like
+		<command>cd</command> or any other commands that you use in the Linux terminal or
+		DOS prompt.
+		
+		</para>
+		<caution>
+			<para>
+			
+			W.r.t. Python, a program or a script or software all mean the same thing.
+			
+			</para>
+		</caution>
+	</section>
+	<section id="getting-help">
+		<title>Getting Help</title>
+		<para>
+		
+		If you need quick information about any function or statement in Python, then you can
+		use the built-in <literal>help</literal> functionality. This is very useful especially
+		when using the interpreter prompt. For example, run <literal>help(str)</literal> - this
+		displays the help for the <literal>str</literal> class which is used to store all
+		text (strings) that you use in your program. Classes will be explained in detail in
+		the chapter on object-oriented programming. <!-- FIXME : Put a link, linkend here -->
+		
+		</para>
+		<note>
+			<para>
+			
+			Press <keycap>q</keycap> to exit the help.
+			
+			</para>
+		</note>
+		<para>
+		
+		Similarly, you can obtain information about almost anything in Python. Use
+		<literal>help()</literal> to learn more about using <literal>help</literal> itself!
+		
+		</para>
+		<para>
+		
+		In case you need to get help for operators like <literal>print</literal>, then you need
+		to set the <envar>PYTHONDOCS</envar> environment variable appropriately. This can be
+		done easily on Linux/Unix using the <command>env</command> command.
+		
+		</para>
+		<screen>
+		<![CDATA[
+$ env PYTHONDOCS=/usr/share/doc/python-docs-2.3.4/html/ python
+Python 2.3.4 (#1, Oct 26 2004, 16:42:40)
+[GCC 3.4.2 20041017 (Red Hat 3.4.2-6.fc3)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> help('print')
+		]]>
+		</screen>
+		<para>
+		
+		You will notice that I have used quotes to specify <literal>'print'</literal> so that
+		Python can understand that I want to fetch help about 'print' and I am not asking it
+		to print something.
+		
+		</para>
+		<para>
+		
+		Note that the location I have used is the location in Fedora Core 3 Linux - it may be
+		different for different distributions and versions.
+		<!-- NOTE: Update this section when using newer versions of Python or Fedora -->
+		
+		</para>
+	</section>
+	<section id="first-steps-summary">
+		<title>Summary</title>
+		<para>
+		
+		You should now be able to write, save and run Python programs at ease. Now that you
+		are a Python user, let's learn some more Python concepts.
+		
+		</para>
+	</section>
+</chapter>

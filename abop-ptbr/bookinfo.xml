@@ -1,0 +1,34 @@
+<bookinfo id="about-byte-of-python">
+	<title>A Byte of Python</title>
+	
+	<author>
+		<firstname>Swaroop</firstname>
+		<surname>C H</surname>
+		<affiliation>
+			<orgname>www.byteofpython.info</orgname>
+		</affiliation>
+	</author>
+	
+	<date>13 January 2004</date>
+	<releaseinfo>Version 1.20</releaseinfo>
+	<edition>A Byte of Python v1.20</edition>
+	<copyright>
+		<year>2003-2005</year>
+		<holder>Swaroop C H</holder>
+	</copyright>
+	
+	<abstract>
+		<title>Abstract</title>
+		<para>
+			This book will help you to learn the Python programming language, whether you
+			are new to computers or are an experienced programmer.
+		</para>
+	</abstract>
+	
+	<legalnotice>
+		<para>
+			This book is released under the
+			Creative Commons Attribution-NonCommercial-ShareAlike License 2.0 .
+		</para>
+	</legalnotice>
+</bookinfo>

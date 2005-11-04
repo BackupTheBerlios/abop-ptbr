@@ -1,0 +1,780 @@
+<chapter id="problem-solving">
+	<title>Problem Solving - Writing a Python Script</title>
+	
+	<para>
+	
+	We have explored various parts of the Python language and now we will take a look at how all
+	these parts fit together, by designing and writing a program which <emphasis>does</emphasis>
+	something useful.
+	
+	</para>
+	
+	<section id="the-problem">
+		<title>The Problem</title>
+		<para>
+		
+		The problem is <emphasis>'I want a program which creates a backup of all my important
+		files'</emphasis>.
+		
+		</para>
+		<para>
+		
+		Although, this is a simple problem, there is not enough information for us to get started with
+		the solution. A little more <emphasis role="bold">analysis</emphasis> is required. For example,
+		how do we specify which files are to be backed up? Where is the backup stored? How are they
+		stored in the backup?
+		
+		</para>
+		<para>
+		
+		After analyzing the problem properly, we <emphasis role="bold">design</emphasis> our program. We
+		make a list of things about how our program should work. In this case, I have created the
+		following list on how <emphasis>I</emphasis> want it to work. If you do the design, you may not
+		come up with the same kind of problem - every person has their own way of doing things, this is
+		ok.
+		
+		</para>
+		<orderedlist>
+			<listitem>
+				<para>
+				
+				The files and directories to be backed up are specified in a list.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				The backup must be stored in a main backup directory.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				The files are backed up into a zip file.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				The name of the zip archive is the current date and time.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				We use the standard <command>zip</command> command available by default in any
+				standard Linux/Unix distribution. Windows users can use the
+				<application>Info-Zip</application> program. Note that you can use any archiving
+				command you want as long as it has a command line interface so that we can pass
+				arguments to it from our script.
+				
+				</para>
+			</listitem>
+		</orderedlist>
+	</section>
+	
+	<section id="the-solution">
+		<title>The Solution</title>
+		
+		<para>
+		
+		As the design of our program is now stable, we can write the code which is an
+		<emphasis role="bold">implementation</emphasis> of our solution.
+		
+		</para>
+		
+		<section id="first-version">
+			<title>First Version</title>
+			
+			<example>
+				<title>Backup Script - The First Version</title>
+				
+				<programlisting>
+				<![CDATA[
+#!/usr/bin/python
+# Filename: backup_ver1.py
+
+import os
+import time
+
+# 1. The files and directories to be backed up are specified in a list.
+source = ['/home/swaroop/byte', '/home/swaroop/bin']
+# If you are using Windows, use source = [r'C:\Documents', r'D:\Work'] or something like that
+
+# 2. The backup must be stored in a main backup directory
+target_dir = '/mnt/e/backup/' # Remember to change this to what you will be using
+
+# 3. The files are backed up into a zip file.
+# 4. The name of the zip archive is the current date and time
+target = target_dir + time.strftime('%Y%m%d%H%M%S') + '.zip'
+
+# 5. We use the zip command (in Unix/Linux) to put the files in a zip archive
+zip_command = "zip -qr '%s' %s" % (target, ' '.join(source))
+
+# Run the backup
+if os.system(zip_command) == 0:
+	print 'Successful backup to', target
+else:
+	print 'Backup FAILED'
+				]]>
+				</programlisting>
+			</example>
+			
+			<section>
+				<title>Output</title>
+				
+				<screen>
+				<![CDATA[
+$ python backup_ver1.py
+Successful backup to /mnt/e/backup/20041208073244.zip
+				]]>
+				</screen>
+				<para>
+				
+				Now, we are in the <emphasis role="bold">testing</emphasis> phase where
+				we test that our program works properly. If it doesn't behave as
+				expected, then we have to <emphasis role="bold">debug</emphasis> our
+				program i.e. remove the <emphasis>bugs</emphasis> (errors) from the
+				program.
+				
+				</para>
+			</section>
+			
+			<section>
+				<title>How It Works</title>
+				
+				<para>
+				
+				You will notice how we have converted our <emphasis>design</emphasis> into
+				<emphasis>code</emphasis> in a step-by-step manner.
+				
+				</para>
+				<para>
+				
+				We make use of the <literal>os</literal> and <literal>time</literal>
+				modules and so we import them. Then, we specify the files and directories
+				to be backed up in the <varname>source</varname> list. The target directory
+				is where store all the backup files and this is specified in the
+				<varname>target_dir</varname> variable. The name of the zip archive that
+				we are going to create is the current date and time which we fetch using the
+				<function>time.strftime()</function> function. It will also have the
+				<filename>.zip</filename> extension and will be stored in the
+				<varname>target_dir</varname> directory.
+				
+				</para>
+				<para>
+				
+				The <function>time.strftime()</function> function takes a specification
+				such as the one we have used in the above program. The <literal>%Y</literal>
+				specification will be replaced by the year without the cetury. The
+				<literal>%m</literal> specification will be replaced by the month as a
+				decimal number between  <literal>01</literal> and <literal>12</literal> and
+				so on. The complete list of such specifications can be found in the
+				<citation>Python Reference Manual</citation> that comes with your Python
+				distribution. Notice that this is similar to (but not same as) the
+				specification used in <literal>print</literal> statement (using the
+				<literal>%</literal> followed by tuple).
+				
+				</para>
+				<para>
+				
+				We create the name of the target zip file using the addition operator
+				which <emphasis>concatenates</emphasis> the strings i.e. it joins the
+				two strings together and returns a new one. Then, we create a string
+				<varname>zip_command</varname> which contains the command that we are
+				going to execute. You can check if this command works by running it on
+				the shell (Linux terminal or DOS prompt).
+				
+				</para>
+				<para>
+				
+				The <command>zip</command> command that we are using has some options
+				and parameters passed. The <option>-q</option> option is used to indicate
+				that the zip command should work <emphasis role="bold">q</emphasis>uietly.
+				The <option>-r</option> option specifies that the zip command should work
+				<emphasis role="bold">r</emphasis>ecursively for directories i.e. it
+				should include subdirectories and files within the subdirectories as well.
+				The two options are combined and specified in a shorter way as
+				<option>-qr</option>. The options are followed by the name of the zip archive
+				to create followed by the list of files and directories to backup. We
+				convert the <varname>source</varname> list into a string using the
+				<methodname>join</methodname> method of strings which we have already seen
+				how to use.
+				
+				</para>
+				<para>
+				
+				Then, we finally <emphasis>run</emphasis> the command using the
+				<function>os.system</function> function which runs the command as if it
+				was run from the <emphasis>system</emphasis> i.e. in the shell - it returns
+				<literal>0</literal> if the command was successfully, else it returns an
+				error number.
+				
+				</para>
+				<para>
+				
+				Depending on the outcome of the command, we print the appropriate message
+				that the backup has failed or succeeded and that's it, we have created a
+				script to take a backup of our important files!
+				
+				</para>
+				
+				<note>
+					<title>Note to Windows Users</title>
+				
+					<para>
+					
+					You can set the <varname>source</varname> list and
+					<varname>target</varname> directory to any file and directory names
+					but you have to be a little careful in Windows. The problem is that
+					Windows uses the backslash (<literal>\</literal>) as the directory
+					separator character but Python uses backslashes to represent
+					escape sequences!
+					
+					</para>
+					<para>
+					
+					So, you have to represent a backslash itself using an escape
+					sequence or you have to use raw strings. For example, use
+					<literal>'C:\\Documents'</literal> or <literal>r'C:\Documents'</literal>
+					but do <emphasis role="bold">not</emphasis> use
+					<literal>'C:\Documents'</literal> - you are using an unknown
+					escape sequence <literal>\D</literal> !
+					
+					</para>
+				</note>
+				
+				<para>
+				
+				Now that we have a working backup script, we can use it whenever we want
+				to take a backup of the files. Linux/Unix users are advised to use the
+				<link linkend="executable-python-programs">executable method</link> as
+				discussed earlier so that they can run the backup script anytime anywhere.
+				This is called the <emphasis role="bold">operation</emphasis> phase or the
+				<emphasis role="bold">deployment</emphasis> phase of the software.
+				
+				</para>
+				<para>
+				
+				The above program works properly, but (usually) first programs do not work
+				exactly as you expect. For example, there might be problems if you have not
+				designed the program properly or if you have made a mistake in typing the
+				code, etc. Appropriately, you will have to go back to the design phase or
+				you will have to debug your program.
+				
+				</para>
+			</section>
+		</section>
+		
+		<section id="second-version">
+			<title>Second Version</title>
+			
+			<para>
+			
+			The first version of our script works. However, we can make some refinements to it
+			so that it can work better on a daily basis. This is called the
+			<emphasis role="bold">maintenance</emphasis> phase of the software.
+			
+			</para>
+			<para>
+			
+			One of the refinements I felt was useful is a better file-naming mechanism - using
+			the <emphasis>time</emphasis> as the name of the file within a directory with the
+			current <emphasis>date</emphasis> as a directory within the main backup directory.
+			One advantage is that your backups are stored in a hierarchical manner and therefore
+			it is much easier to manage. Another advantage is that the length of the filenames
+			are much shorter this way. Yet another advantage is that separate directories will
+			help you to easily check if you have taken a backup for each day since the
+			directory would be created only if you have taken a backup for that day.
+			
+			</para>
+			
+			<example>
+				<title>Backup Script - The Second Version</title>
+				
+				<programlisting>
+				<![CDATA[
+#!/usr/bin/python
+# Filename: backup_ver2.py
+
+import os
+import time
+
+# 1. The files and directories to be backed up are specified in a list.
+source = ['/home/swaroop/byte', '/home/swaroop/bin']
+# If you are using Windows, use source = [r'C:\Documents', r'D:\Work'] or something like that
+
+# 2. The backup must be stored in a main backup directory
+target_dir = '/mnt/e/backup/' # Remember to change this to what you will be using
+
+# 3. The files are backed up into a zip file.
+# 4. The current day is the name of the subdirectory in the main directory
+today = target_dir + time.strftime('%Y%m%d')
+# The current time is the name of the zip archive
+now = time.strftime('%H%M%S')
+
+# Create the subdirectory if it isn't already there
+if not os.path.exists(today):
+	os.mkdir(today) # make directory
+	print 'Successfully created directory', today
+
+# The name of the zip file
+target = today + os.sep + now + '.zip'
+
+# 5. We use the zip command (in Unix/Linux) to put the files in a zip archive
+zip_command = "zip -qr '%s' %s" % (target, ' '.join(source))
+
+# Run the backup
+if os.system(zip_command) == 0:
+	print 'Successful backup to', target
+else:
+	print 'Backup FAILED'
+				]]>
+				</programlisting>
+			</example>
+			
+			<section>
+				<title>Output</title>
+				
+				<screen>
+				<![CDATA[
+$ python backup_ver2.py
+Successfully created directory /mnt/e/backup/20041208
+Successful backup to /mnt/e/backup/20041208/080020.zip
+
+$ python backup_ver2.py
+Successful backup to /mnt/e/backup/20041208/080428.zip
+
+				]]>
+				</screen>
+			</section>
+			
+			<section>
+				<title>How It Works</title>
+				
+				<para>
+				
+				Most of the program remains the same. The changes is that we check if there
+				is a directory with the current day as name inside the main backup
+				directory using the <function>os.exists</function> function. If it doesn't
+				exist, we create it using the <function>os.mkdir</function> function.
+				
+				</para>
+				<para>
+				
+				Notice the use of <varname>os.sep</varname> variable - this gives the
+				directory separator according to your operating system i.e. it will be
+				<literal>'/'</literal> in Linux, Unix, it will be <literal>'\\'</literal>
+				in Windows and <literal>':'</literal> in Mac OS. Using
+				<varname>os.sep</varname> instead of these characters directly will make
+				our program portable and work across these systems.
+				
+				</para>
+			</section>
+		</section>
+		
+		<section id="third-version">
+			<title>Third Version</title>
+			
+			<para>
+			
+			The second version works fine when I do many backups, but when there are lots of
+			backups, I am finding it hard to differentiate what the backups were for! For
+			example, I might have made some major changes to a program or presentation,
+			then I want to associate what those changes are with the name of the zip archive.
+			This can be easily achieved by attaching a user-supplied comment to the name of
+			the zip archive.
+			
+			</para>
+			
+			<example>
+				<title>Backup Script - The Third Version (does not work!)</title>
+				
+				<programlisting>
+				<![CDATA[
+#!/usr/bin/python
+# Filename: backup_ver2.py
+
+import os
+import time
+
+# 1. The files and directories to be backed up are specified in a list.
+source = ['/home/swaroop/byte', '/home/swaroop/bin']
+# If you are using Windows, use source = [r'C:\Documents', r'D:\Work'] or something like that
+
+# 2. The backup must be stored in a main backup directory
+target_dir = '/mnt/e/backup/' # Remember to change this to what you will be using
+
+# 3. The files are backed up into a zip file.
+# 4. The current day is the name of the subdirectory in the main directory
+today = target_dir + time.strftime('%Y%m%d')
+# The current time is the name of the zip archive
+now = time.strftime('%H%M%S')
+
+# Take a comment from the user to create the name of the zip file
+comment = raw_input('Enter a comment --> ')
+if len(comment) == 0: # check if a comment was entered
+	target = today + os.sep + now + '.zip'
+else:
+	target = today + os.sep + now + '_' +
+		comment.replace(' ', '_') + '.zip'
+
+# Create the subdirectory if it isn't already there
+if not os.path.exists(today):
+	os.mkdir(today) # make directory
+	print 'Successfully created directory', today
+
+# 5. We use the zip command (in Unix/Linux) to put the files in a zip archive
+zip_command = "zip -qr '%s' %s" % (target, ' '.join(source))
+
+# Run the backup
+if os.system(zip_command) == 0:
+	print 'Successful backup to', target
+else:
+	print 'Backup FAILED'
+				]]>
+				</programlisting>
+			</example>
+				
+			<section>
+				<title>Output</title>
+				
+				<screen>
+				<![CDATA[
+$ python backup_ver3.py
+File "backup_ver3.py", line 25
+target = today + os.sep + now + '_' +
+					^
+SyntaxError: invalid syntax
+					]]>
+				</screen>
+			</section>
+			
+			<section>
+				<title>How This (does not) Work</title>
+				
+				<para>
+				
+				<emphasis role="bold">This program does not work!</emphasis>.
+				Python says there is a syntax error which means that the script
+				does not satisfy the structure that Python expects to see.
+				When we observe the error given by Python, it also tells us the
+				place where it detected the error as well. So we start
+				<emphasis>debugging</emphasis> our program from that line.
+				
+				</para>
+				<para>
+				
+				On careful observation, we see that the single logical line has
+				been split into two physical lines but we have not specified that
+				these two physical lines belong together. Basically, Python has
+				found the addition operator (<literal>+</literal>) without any
+				operand in that logical line and hence it doesn't know how to
+				continue. Remember that we can specify that the logical line continues
+				in the next physical line by the use of a backslash at the end of the
+				physical line. So, we make this correction to our program. This is
+				called <emphasis role="bold">bug fixing</emphasis>.
+				
+				</para>
+			</section>
+		</section>
+		
+		<section id="fourth-version">
+			<title>Fourth Version</title>
+			
+			<example>
+				<title>Backup Script - The Fourth Version</title>
+				
+				<programlisting>
+				<![CDATA[
+#!/usr/bin/python
+# Filename: backup_ver2.py
+
+import os, time
+
+# 1. The files and directories to be backed up are specified in a list.
+source = ['/home/swaroop/byte', '/home/swaroop/bin']
+# If you are using Windows, use source = [r'C:\Documents', r'D:\Work'] or something like that
+
+# 2. The backup must be stored in a main backup directory
+target_dir = '/mnt/e/backup/' # Remember to change this to what you will be using
+
+# 3. The files are backed up into a zip file.
+# 4. The current day is the name of the subdirectory in the main directory
+today = target_dir + time.strftime('%Y%m%d')
+# The current time is the name of the zip archive
+now = time.strftime('%H%M%S')
+
+# Take a comment from the user to create the name of the zip file
+comment = raw_input('Enter a comment --> ')
+if len(comment) == 0: # check if a comment was entered
+	target = today + os.sep + now + '.zip'
+else:
+	target = today + os.sep + now + '_' + \
+		comment.replace(' ', '_') + '.zip'
+ 	# Notice the backslash!
+
+# Create the subdirectory if it isn't already there
+if not os.path.exists(today):
+	os.mkdir(today) # make directory
+	print 'Successfully created directory', today
+
+# 5. We use the zip command (in Unix/Linux) to put the files in a zip archive
+zip_command = "zip -qr '%s' %s" % (target, ' '.join(source))
+
+# Run the backup
+if os.system(zip_command) == 0:
+	print 'Successful backup to', target
+else:
+	print 'Backup FAILED'
+				]]>
+				</programlisting>
+			</example>
+			
+			<section>
+				<title>Output</title>
+				
+				<screen>
+				<![CDATA[
+$ python backup_ver4.py
+Enter a comment --> added new examples
+Successful backup to /mnt/e/backup/20041208/082156_added_new_examples.zip
+
+$ python backup_ver4.py
+Enter a comment -->
+Successful backup to /mnt/e/backup/20041208/082316.zip
+				]]>
+				</screen>
+			</section>
+			
+			<section>
+				<title>How It Works</title>
+				
+				<para>
+				
+				This program now works! Let us go through the actual enhancements that we
+				had made in version 3. We take in the user's comments using the
+				<function>raw_input</function> function and then check if the user actually
+				entered something by finding out the length of the input using the
+				<function>len</function> function. If the user has just pressed
+				<keycap>enter</keycap> for some reason (maybe it was just a routine backup
+				or no special changes were made), then we proceed as we have done before.
+				
+				</para>
+				<para>
+				
+				However, if a comment was supplied, then this is attached to the name of
+				the zip archive just before the <filename>.zip</filename> extension.
+				Notice that we are replacing spaces in the comment with underscores - this
+				is because managing such filenames are much easier.
+				
+				</para>
+			</section>
+		</section>
+		
+		<section id="more-refinements">
+			<title>More Refinements</title>
+			
+			<para>
+			
+			The fourth version is a satisfactorily working script for most users, but there is
+			always room for improvement. For example, you can include a
+			<emphasis>verbosity</emphasis> level for the program where you can specify a
+			<option>-v</option> option to make your program become more talkative.
+			
+			</para>
+			<para>
+			
+			Another possible enhancement would be to allow extra files and directories to be
+			passed to the script at the command line. We will get these from the
+			<varname>sys.argv</varname> list and we can add them to our
+			<varname>source</varname> list using the <methodname>extend</methodname> method
+			provided by the <classname>list</classname> class.
+			
+			</para>
+			<para>
+			
+			One refinement I prefer is the use of the <command>tar</command> command instead
+			of the <command>zip</command> command. One advantage is that when you use the
+			<command>tar</command> command along with <command>gzip</command>, the backup is
+			much faster and the backup created is also much smaller. If I need to use this
+			archive in Windows, then <application>WinZip</application> handles such
+			<filename>.tar.gz</filename> files easily as well. The <command>tar</command>
+			command is available by default on most Linux/Unix systems. Windows users can
+			<ulink url="http://gnuwin32.sourceforge.net/packages/tar.htm">download</ulink>
+			and install it as well.
+			
+			</para>
+			<para>
+			
+			The command string will now be:
+			
+			</para>
+			<programlisting>
+			<![CDATA[
+tar = 'tar -cvzf %s %s -X /home/swaroop/excludes.txt' % (target, ' '.join(srcdir))
+			]]>
+			</programlisting>
+			<para>
+			
+			The options are explained below.
+			
+			</para>
+			<itemizedlist>
+				<listitem>
+					<para>
+					
+					<option>-c</option> indicates <emphasis role="bold">c</emphasis>reation
+					of an archive.
+					
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					
+					<option>-v</option> indicates <emphasis role="bold">v</emphasis>erbose
+					i.e. the command should be more talkative.
+					
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					
+					<option>-z</option> indicates the g<emphasis role="bold">z</emphasis>ip
+					filter should be used.
+					
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					
+					<option>-f</option> indicates <emphasis role="bold">f</emphasis>orce
+					in creation of archive i.e. it should replace if there is a file
+					by the same name already.
+					
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					
+					<option>-X</option> indicates a file which contains a list of filenames
+					which must be e<emphasis role="bold">x</emphasis>cluded from the backup.
+					For example, you can specify <literal>*~</literal> in this file to not
+					include any filenames ending with <literal>~</literal> in the backup.
+					
+					</para>
+				</listitem>
+			</itemizedlist>
+			
+			<important>
+				<para>
+				
+				The most preferred way of creating such kind of archives would be using
+				the <literal>zipfile</literal> or <literal>tarfile</literal> module
+				respectively. They are part of the Python Standard Library and available
+				for you to use already. Using these libraries also avoids the use of the
+				<function>os.system</function> which is generally not advisable to use
+				because it is very easy to make costly mistakes using it.
+				
+				</para>
+				<para>
+				
+				However, I have been using the <function>os.system</function> way of
+				creating a backup purely for pedagogical purposes, so that the example
+				is simple enough to be understood by everybody but real enough to be
+				useful.
+				
+				</para>
+			</important>
+		</section>
+	</section>
+	
+	<section id="software-development-process">
+		<title>The Software Development Process</title>
+		
+		<para>
+		
+		We have now gone through the various <emphasis role="bold">phases</emphasis> in the process
+		of writing a software. These phases can be summarised as follows:
+		
+		</para>
+		
+		<procedure>
+			<step>
+				<para>
+				
+				What (Analysis)
+				
+				</para>
+			</step>
+			<step>
+				<para>
+				
+				How (Design)
+				
+				</para>
+			</step>
+			<step>
+				<para>
+				
+				Do It (Implementation)
+				
+				</para>
+			</step>
+			<step>
+				<para>
+				
+				Test (Testing and Debugging)
+				
+				</para>
+			</step>
+			<step>
+				<para>
+				
+				Use (Operation or Deployment)
+				
+				</para>
+			</step>
+			<step>
+				<para>
+				
+				Maintain (Refinement)
+				
+				</para>
+			</step>
+		</procedure>
+		
+		<important>
+			<para>
+			
+			A recommended way of writing programs is the procedure we have followed in creating
+			the backup script - Do the analysis and design. Start implementing with a simple
+			version. Test and debug it. Use it to ensure that it works as expected. Now, add any
+			features that you want and continue to repeat the Do It-Test-Use cycle as many times
+			as required. Remember, '<emphasis role="bold">Software is grown, not built</emphasis>'.
+			
+			</para>
+		</important>
+	</section>
+	
+	<section id="problem-solving-summary">
+		<title>Summary</title>
+		
+		<para>
+		
+		We have seen how to create our own Python programs/scripts and the various stages involved
+		in writing such programs. You may find it useful to create your own program just like we
+		did in this chapter so that you become comfortable with Python as well as problem-solving.
+		
+		</para>
+		<para>
+		
+		Next, we will discuss object-oriented programming.
+		
+		</para>
+	</section>
+</chapter>

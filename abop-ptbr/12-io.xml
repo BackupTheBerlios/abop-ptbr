@@ -1,0 +1,242 @@
+<chapter id="io">
+	<title>Input/Output</title>
+	
+	<para>
+	
+	There will be lots of times when you want your program to interact with the user (which could be
+	yourself). You would want to take input from the user and then print some results back. We can
+	achieve this using the <function>raw_input</function> and <literal>print</literal> statements
+	respectively. For output, we can also use the various methods of the <classname>str</classname>
+	(string) class. For example, you can use the <methodname>rjust</methodname> method to get a
+	string which is right justified to a specified width. See <literal>help(str)</literal> for more
+	details.
+	
+	</para>
+	<para>
+	
+	Another common type of input/output is dealing with files. The ability to create, read and write
+	files is essential to many programs and we will explore this aspect in this chapter.
+	
+	</para>
+	
+	<section id="files">
+		<title>Files</title>
+		
+		<para>
+		
+		You can open and use files for reading or writing by creating an object of the
+		<classname>file</classname> class and using its <methodname>read</methodname>,
+		<methodname>readline</methodname> or <methodname>write</methodname> methods
+		appropriately to read from or write to the file. The ability to read or write to
+		the file depends on the mode you have specified for the file opening. Then finally,
+		when you are finished with the file, you call the <methodname>close</methodname>
+		method to tell Python that we are done using the file.
+		
+		</para>
+		
+		<section id="using-files">
+			<title>Using file</title>
+			
+			<example>
+				<title>Using files</title>
+				
+				<programlisting>
+				<![CDATA[
+#!/usr/bin/python
+# Filename: using_file.py
+
+poem = '''\
+Programming is fun
+When the work is done
+if you wanna make your work also fun:
+	use Python!
+'''
+
+f = file('poem.txt', 'w') # open for 'w'riting
+f.write(poem) # write text to file
+f.close() # close the file
+
+f = file('poem.txt') # if no mode is specified, 'r'ead mode is assumed by default
+while True:
+	line = f.readline()
+	if len(line) == 0: # Zero length indicates EOF
+		break
+	print line, # Notice comma to avoid automatic newline added by Python
+f.close() # close the file
+				]]>
+				</programlisting>
+			</example>
+			
+			<section>
+				<title>Output</title>
+				
+				<screen>
+				<![CDATA[
+$ python using_file.py
+Programming is fun
+When the work is done
+if you wanna make your work also fun:
+        use Python!
+				]]>
+				</screen>
+			</section>
+			
+			<section>
+				<title>How It Works</title>
+				
+				<para>
+				
+				First, we create an instance of the <classname>file</classname> class
+				by specifying the name of the file and the mode in which we want to open
+				the file. The mode can be a read mode (<literal>'r'</literal>), write
+				mode (<literal>'w'</literal>) or append mode (<literal>'a'</literal>).
+				There are actually many more modes available and <literal>help(file)</literal>
+				will give you more details about them.
+				
+				</para>
+				<para>
+				
+				We first open the file in write mode and use the <methodname>write</methodname>
+				method of the <classname>file</classname> class to write to the file and then
+				we finally <methodname>close</methodname> the file.
+				
+				</para>
+				<para>
+				
+				Next, we open the same file again for reading. If we don't specify a mode,
+				then the read mode is the default one. We read in each line of the file
+				using the <methodname>readline</methodname> method, in a loop. This method
+				returns a complete line including the newline character at the end of the
+				line. So, when an <emphasis>empty</emphasis> string is returned, it
+				indicates that the end of the file has been reached and we stop the loop.
+				
+				</para>
+				<para>
+				
+				Notice that we use a comma with the <literal>print</literal> statement to
+				suppress the automatic newline that the <literal>print</literal> statement
+				adds because the line that is read from the file already ends with a
+				newline character. Then, we finally <methodname>close</methodname> the file.
+				
+				</para>
+				<para>
+				
+				Now, see the contents of the <filename>poem.txt</filename> file to confirm
+				that the program has indeed worked properly.
+				
+				</para>
+			</section>
+		</section>
+	</section>
+	
+	<section id="pickle">
+		<title>Pickle</title>
+		
+		<para>
+		
+		Python provides a standard module called <literal>pickle</literal> using which you can
+		store <emphasis role="bold">any</emphasis> Python object in a file and then get it back
+		later intact. This is called storing the object <emphasis>persistently</emphasis>.
+		
+		</para>
+		<para>
+		
+		There is another module called <literal>cPickle</literal> which functions exactly same as
+		the <literal>pickle</literal> module except that it is written in the C language and is
+		(upto 1000 times) faster. You can use either of these modules, although we will be using
+		the <literal>cPickle</literal> module here. Remember though, that we refer to both these
+		modules as simply the <literal>pickle</literal> module.
+		
+		</para>
+		
+		<section id="pickling-and-unpickling">
+			<title>Pickling and Unpickling</title>
+			
+			<example>
+				<title>Pickling and Unpickling</title>
+				
+				<programlisting>
+				<![CDATA[
+#!/usr/bin/python
+# Filename: pickling.py
+
+import cPickle as p
+#import pickle as p
+
+shoplistfile = 'shoplist.data' # the name of the file where we will store the object
+
+shoplist = ['apple', 'mango', 'carrot']
+
+# Write to the file
+f = file(shoplistfile, 'w')
+p.dump(shoplist, f) # dump the object to a file
+f.close()
+
+del shoplist # remove the shoplist
+
+# Read back from the storage
+f = file(shoplistfile)
+storedlist = p.load(f)
+print storedlist
+				]]>
+				</programlisting>
+			</example>
+			
+			<section>
+				<title>Output</title>
+				
+				<screen>
+				<![CDATA[
+$ python pickling.py
+['apple', 'mango', 'carrot']
+				]]>
+				</screen>
+			</section>
+			
+			<section>
+				<title>How It Works</title>
+				
+				<para>
+				
+				First, notice that we use the <literal>import..as</literal> syntax. This
+				is handy since we can use a shorter name for a module. In this case, it even
+				allows us to switch to a different module (<literal>cPickle</literal>
+				or <literal>pickle</literal>) by simply changing one line! In the rest of the
+				program, we simply refer to this module as <varname>p</varname>.
+				
+				</para>
+				<para>
+				
+				To store an object in a file, first we open a <classname>file</classname>
+				object in write mode and store the object into the open file by calling
+				the <function>dump</function> function of the pickle module. This process
+				is called <emphasis>pickling</emphasis>.
+				
+				</para>
+				<para>
+				
+				Next, we retrieve the object using the <function>load</function> function
+				of the <literal>pickle</literal> module which returns the object.
+				This process is called <emphasis>unpickling</emphasis>.
+				
+				</para>
+			</section>
+		</section>
+	</section>
+	
+	<section id="io-summary">
+		<title>Summary</title>
+		
+		<para>
+		
+		We have discussed various types of input/output and also file handling and using the
+		pickle module.
+		
+		</para>
+		<para>
+		
+		Next, we will explore the concept of exceptions.
+		
+		</para>
+	</section>
+</chapter>

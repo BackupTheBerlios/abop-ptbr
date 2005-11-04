@@ -1,0 +1,173 @@
+<chapter id="installing-python">
+	<title>Installing Python</title>
+	
+	<section id="for-linux-bsd-users">
+		<title>For Linux/BSD users</title>
+		
+		<para>
+		
+		If you are using a Linux distribution such as Fedora or Mandrake or
+		{put your choice here}, or a BSD system such as FreeBSD, then you probably already
+		have Python installed on your system.
+		
+		</para>
+		<para>
+		
+		To test if you have Python already installed on your Linux box, open a shell
+		program (like <application>konsole</application> or
+		<application>gnome-terminal</application>) and enter the command
+		<command>python -V</command> as shown below.
+		
+		</para>
+		<informalexample>
+			<screen>
+$ python -V
+Python 2.3.4
+			</screen>
+		</informalexample>
+		
+		<note>
+			<para>
+			
+			<prompt>$</prompt> is the prompt of the shell. It will be different for you
+			depending on the settings of your OS, hence I will indicate the prompt by
+			just the <prompt>$</prompt> symbol.
+			
+			</para>
+		</note>
+		
+		<para>
+		
+		If you see some version information like the one shown above, then you have
+		Python installed already.
+		
+		</para>
+		<para>
+		
+		However, if you get a message like this one:
+		
+		</para>
+		<screen>
+$ python -V
+bash: python: command not found
+		</screen>
+		<para>
+		
+		then, you don't have Python installed. This is highly unlikely but possible.
+		
+		</para>
+		<para>
+		
+		In this case, you have two ways of installing Python on your system.
+		
+		</para>
+		<itemizedlist>
+			<listitem>
+				<para>
+				
+				Install the binary packages using the package management software
+				that comes with your OS, such as <application>yum</application> in
+				Fedora Linux, <application>urpmi</application> in Mandrake Linux,
+				<application>apt-get</application> in Debian Linux,
+				<application>pkg_add</application> in FreeBSD, etc. Note that you
+				will need an internet connection to use this method.
+				
+				</para>
+				<para>
+				
+				Alternatively, you can download the binaries from somewhere else and
+				then copy to your PC and install it.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				You can compile Python from the <ulink url="http://www.python.org/download/"
+				>source code</ulink> and install it. The compilation instructions are
+				provided at the website.
+				
+				</para>
+			</listitem>
+		</itemizedlist>
+	</section>
+	
+	<section id="for-windows-users">
+		<title>For Windows Users</title>
+		
+		<para>
+		
+		Visit <ulink url="http://www.python.org/download/">Python.org/download</ulink> and
+		download the latest version from this website (which was
+		<ulink url="http://www.python.org/ftp/python/2.3.4/Python-2.3.4.exe">2.3.4</ulink>
+		as of this writing. This is just 9.4 MB which is very compact compared to most other
+		languages. The installation is just like any other Windows-based software.
+		
+		</para>
+		
+		<caution>
+			<para>
+			
+			When you are given the option of unchecking any <emphasis>optional</emphasis>
+			components, don't uncheck any! Some of these components can be useful for you,
+			especially IDLE.
+			
+			</para>
+		</caution>
+		
+		<para>
+		
+		An interesting fact is that about 70% of Python downloads are by Windows users. Of course,
+		this doesn't give the complete picture since almost all Linux users will have Python
+		installed already on their systems by default.
+		
+		</para>
+		
+		<note>
+			<title>Using Python in the Windows command line</title>
+			<para>
+			
+			If you want to be able to use Python from the Windows command line, then you
+			need to set the PATH variable appropriately.
+			
+			</para>
+			<para>
+			
+			For Windows 2000, XP, 2003 , click on <guimenu>Control Panel</guimenu> ->
+			<guisubmenu>System</guisubmenu> -> <guisubmenu>Advanced</guisubmenu> ->
+			<guimenuitem>Environment Variables</guimenuitem>. Click on the variable
+			named <emphasis role="bold">PATH</emphasis> in the 'System Variables'
+			section, then select <guimenuitem>Edit</guimenuitem> and add
+			<command>;C:\Python23</command> (without the quotes) to the end of
+			what is already there. Of course, use the appropriate directory name.
+			
+			</para>
+			<para>
+			
+			For older versions of Windows, add the following line to the file
+			<filename>C:\AUTOEXEC.BAT</filename> : '<command>PATH=%PATH%;C:\Python23</command>'
+			(without the quotes) and restart the system. For Windows NT, use the 
+			<filename>AUTOEXEC.NT</filename> file.
+			
+			</para>
+		</note>
+	</section>
+	
+	<section id="installation-summary">
+		<title>Summary</title>
+		<para>
+		
+		For a Linux system, you most probably already have Python installed on your system.
+		Otherwise, you can install it using the package management software that comes with
+		your distribution. For a Windows system, installing Python is as easy as downloading
+		the installer and double-clicking on it. From now on, we will assume that you have
+		Python installed on your system.
+		
+		</para>
+		<para>
+		
+		Next, we will write our first Python program.
+		
+		</para>
+	</section>
+</chapter>

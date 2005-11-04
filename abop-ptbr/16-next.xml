@@ -1,0 +1,321 @@
+<chapter id="what-next">
+	<title>What Next?</title>
+	
+	<para>
+	
+	If you have read this book thoroughly till now and practiced writing a lot of programs, then you
+	must have become comfortable and familiar with Python.  You have probably created some Python
+	programs to try out stuff and to exercise your Python skills as well. If you have not done it
+	already, you should. The question now is 'What Next?'.
+	
+	</para>
+	<para>
+	
+	I would suggest that you tackle this problem: create your own command-line
+	<emphasis>address-book</emphasis> program using which you can add, modify, delete or search for
+	your contacts such as friends, family and colleagues and their information such as email address
+	and/or phone number. Details must be stored for later retrieval.
+	
+	</para>
+	<para>
+	
+	This is fairly easy if you think about it in terms of all the various stuff that we have come
+	across till now. If you still want directions on how to proceed, then here's a hint.
+	
+	</para>
+	<formalpara>
+		<title>Hint. (You shouldn't be reading this)</title>
+		
+		<para>
+		
+		Create a class to represent the person's information. Use a dictionary to store person
+		objects with their name as the key. Use the cPickle module to store the objects
+		persistently on your hard disk. Use the dictionary built-in methods to add, delete and
+		modify the persons.
+		
+		</para>
+	</formalpara>
+	
+	<para>
+	
+	Once you are able to do this, you can claim to be a Python programmer. Now, immediately send me
+	a mail thanking me for this great book ;-) . This step is optional but recommended.
+	
+	</para>
+	<para>
+	
+	Here are some ways to continue your journey with Python:
+	
+	</para>
+	
+	<section id="graphical-software">
+		<title>Graphical Software</title>
+		
+		<para>
+		
+		<emphasis role="bold">GUI</emphasis> Libraries using Python - you need these to create
+		your own graphical programs using Python. You can create your own IrfanView or
+		Kuickshow or anything like that using the GUI libraries with their Python bindings.
+		Bindings are what allow you to write programs in Python and use the libraries which are
+		themselves written in C or C++ or other languages.
+		
+		</para>
+		<para>
+		
+		There are lots of choices for GUI using Python:
+		
+		</para>
+		
+		<itemizedlist>
+			<listitem>
+				<formalpara>
+					<title>PyQt</title>
+					
+					<para>
+					
+					This is the Python binding for the Qt toolkit which is the foundation
+					upon which the KDE is built. Qt is extremely easy to use and very
+					powerful especially due to the Qt Designer and the amazing Qt
+					documentation. You can use it for free on Linux but you will have to
+					pay for it if you want to use it on Windows. PyQt is free if you want
+					to create free (GPL'ed) software on Linux/Unix and paid if you want to
+					create proprietary software. A good resource on PyQt is
+					<ulink url="http://www.opendocs.org/pyqt/">'GUI Programming with
+					Python: Qt Edition'</ulink>. See the
+					<ulink url="http://www.riverbankcomputing.co.uk/pyqt/index.php"
+					>official homepage</ulink> for more details.
+					
+					</para>
+				</formalpara>
+			</listitem>
+			<listitem>
+				<formalpara>
+					<title>PyGTK</title>
+					
+					<para>
+					
+					This is the Python binding for the GTK+ toolkit which is the
+					foundation upon which GNOME is built. GTK+ has many quirks in usage
+					but once you become comfortable, you can create GUI apps fast. The
+					Glade graphical interface designer is indispensable. The documentation
+					is yet to improve. GTK+ works well on Linux but its port to Windows
+					is incomplete. You can create both free as well as proprietary software
+					using GTK+. See the <ulink url="http://www.pygtk.org/">official
+					homepage</ulink> for more details.
+					
+					</para>
+				</formalpara>
+			</listitem>
+			<listitem>
+				<formalpara>
+					<title>wxPython</title>
+					
+					<para>
+					
+					This is the Python bindings for the wxWidgets toolkit. wxPython has
+					a learning curve associated with it. However, it is very portable
+					and runs on Linux, Windows, Mac and even embedded platforms. There
+					are many IDEs available for wxPython which include GUI designers as
+					well such as <ulink url="http://spe.pycs.net/">SPE (Stani's Python
+					Editor)</ulink> and the
+					<ulink url="http://wxglade.sourceforge.net/">wxGlade</ulink> GUI
+					builder. You can create free as well as proprietary software using
+					wxPython. See the <ulink url="http://www.wxpython.org/">official
+					homepage</ulink> for more details.
+					
+					</para>
+				</formalpara>
+			</listitem>
+			<listitem>
+				<formalpara>
+					<title>TkInter</title>
+					
+					<para>
+					
+					This is one of the oldest GUI toolkits in existence. If you have used
+					<application>IDLE</application>, you have seen a TkInter program at
+					work. The documentation for TkInter at <ulink 
+					url="http://www.pythonware.com/library/tkinter/introduction/index.htm"
+					>PythonWare.org</ulink> is comprehensive. TkInter is portable and works
+					on both Linux/Unix as well as Windows. Importantly, TkInter is part of
+					the standard Python distribution.
+					
+					</para>
+				</formalpara>
+			</listitem>
+			<listitem>
+				<para>
+				
+				For more choices, see the <ulink 
+				url="http://www.python.org/cgi-bin/moinmoin/GuiProgramming"
+				>GuiProgramming wiki page at Python.org</ulink>
+				
+				</para>
+			</listitem>
+		</itemizedlist>
+		
+		<section>
+			<title>Summary of GUI Tools</title>
+			
+			<para>
+			
+			Unfortunately, there is no one standard GUI tool for Python. I suggest that you
+			choose one of the above tools depending on your situation. The first factor is
+			whether you are willing to pay to use any of the GUI tools. The second factor
+			is whether you want the program to run on Linux or Windows or both. The third
+			factor is whether you are a KDE or GNOME user on Linux.
+			
+			</para>
+			<important>
+				<title>Future Chapters</title>
+				
+<!-- 				TODO: Work on future chapter on one of the GUI toolkit -->
+				<para>
+				
+				I am contemplating writing 1 or 2 chapters for this book on GUI Programming.
+				I will be probably be choosing wxPython as the choice of toolkit. If you would
+				like to present your views on the subject, please join the
+				<ulink url="http://lists.ibiblio.org/mailman/listinfo/byte-of-python"
+				>byte-of-python mailing list</ulink> where readers discuss with me on what
+				improvements can be made to the book.
+				
+				</para>
+			</important>
+		</section>
+	</section>
+	<section id="explore-more">
+		<title>Explore More</title>
+		
+		<itemizedlist>
+			<listitem>
+				<para>
+				
+				The <emphasis role="bold">Python Standard Library</emphasis> is an
+				extensive library. Most of the time, this library will have what you are
+				looking for. This is referred to as the 'batteries included' philosophy of
+				Python. I highly recommend that you go through the
+				<ulink url="http://docs.python.org/">Python Standard Documentation</ulink>
+				before you proceed to start writing large Python programs.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				<ulink url="http://www.python.org/">Python.org</ulink> - the official homepage
+				of the Python programming language. You will find the latest versions of the
+				Python language and interpreter here. There are also various mailing lists where
+				active discussions on various aspects of Python take place.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				<emphasis role="bold">comp.lang.python</emphasis> is the usenet newsgroup
+				where discussion about this language takes place. You can post your doubts
+				and queries to this newsgroup. You can access this online using
+				<ulink 
+				url="http://groups.google.com/groups?hl=en&amp;lr=&amp;ie=UTF-8&amp;group=comp.lang.python"
+				>Google Groups</ulink> or join the
+				<ulink url="http://mail.python.org/mailman/listinfo/python-list"
+				>mailing list</ulink> which is just a mirror of the newsgroup.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				<ulink url="http://aspn.activestate.com/ASPN/Python/Cookbook/">Python
+				Cookbook</ulink> is an extremely valuable collection of recipes or tips
+				on how to solve certain kinds of problems using Python. This is a
+				must-read for every Python user.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				<ulink url="http://gnosis.cx/publish/tech_index_cp.html">Charming
+				Python</ulink> is an excellent series of Python-related articles by
+				David Mertz.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				<ulink url="http://www.diveintopython.org/">Dive Into Python</ulink>
+				is a very good book for experienced Python programmers. If you have
+				thoroughly read the current book you are reading, then I would highly
+				recommend that you read 'Dive Into Python' next. It covers a range
+				of topics including XML Processing, Unit Testing and Functional
+				Programming.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				<ulink url="http://www.jython.org/">Jython</ulink> is an implementation of
+				the Python interpreter in the Java language. This means that you can write
+				programs in Python and use the Java libraries as well! Jython is a stable
+				and mature software. If you are a Java programmer as well, I highly
+				recommend that you give Jython a try.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				<ulink url="http://www.ironpython.com/">IronPython</ulink> is an implementation
+				of the Python interpreter in C# language and can run on the .NET / Mono / DotGNU
+				platform. This means that you can write programs in Python and use the
+				.NET Libraries and other libraries provided by these 3 platforms as well!
+				IronPython is still pre-alpha software and is suitable only for experimenting
+				as of now. Jim Hugunin, who wrote IronPython has joined Microsoft and will be
+				working towards a full version of IronPython in future.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				<ulink url="http://www.caddr.com/code/lython/">Lython</ulink> is a Lisp
+				frontend to the Python language. It is similar to Common Lisp and compiles
+				directly to Python bytecode which means that it will interoperate with our
+				usual Python code.
+				
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				
+				There are many many more resources on Python. Interesting ones are
+				<ulink url="http://www.pythonware.com/daily/">Daily Python-URL!</ulink>
+				which keeps you up to date on the latest Python happenings,
+				<ulink url="http://www.vex.net/parnassus/">Vaults of Parnassus</ulink>,
+				<ulink url="http://www.onlamp.com/python/">ONLamp.com Python DevCenter</ulink>,
+				<ulink url="http://dirtsimple.org/">dirtSimple.org</ulink>,
+				<ulink url="http://pythonnotes.blogspot.com/">Python Notes</ulink>
+				and many many more.
+				
+				</para>
+			</listitem>
+		</itemizedlist>
+	</section>
+	
+	<section id="what-next-summary">
+		<title>Summary</title>
+		
+		<para>
+		
+		We have now come to the end of this book but, as they say, this is the
+		<emphasis>the beginning of the end</emphasis>!. You are now an avid Python user and you
+		are no doubt ready to solve many problems using Python. You can start automating your
+		computer to do all kinds of previously unimaginable things or write your own games
+		and much much more. So, get started!
+		
+		</para>
+	</section>
+</chapter>
