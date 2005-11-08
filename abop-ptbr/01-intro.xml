@@ -1,20 +1,31 @@
 <chapter id="introduction">
-	<title>Introduction</title>
+	<title>Introdução<!--Introduction--></title>
 	
 	<section id="introduction-section">
-		<title>Introduction</title>
+		<title>Introdução<!--Introduction--></title>
 		
 		<para>
-		
-		Python is one of those rare languages which can claim to be both
-		<emphasis role="bold">simple</emphasis> and <emphasis role="bold">powerful</emphasis>.
-		You will find that you will be pleasantly surprised on how easy it is to concentrate
-		on the solution to the problem rather than the syntax and structure of the language
-		you are programming in.
-		
+Python é uma daquelas raras linguagens que se auto-proclamam tanto <emphasis role="bold">simples</emphasis> quanto <emphasis role="bold">poderosas</emphasis>. Você ficará agradavelmente surpreso quando descobrir o quanto é fácil se concentrar na solução do problema ao invés de se preocupar com a sintaxe e com a estrutura da linguagem na qual está programando.
+
+<!--
+Python is one of those rare languages which can claim to be both
+<emphasis role="bold">simple</emphasis> and <emphasis role="bold">powerful</emphasis>.
+You will find that you will be pleasantly surprised on how easy it is to concentrate
+on the solution to the problem rather than the syntax and structure of the language
+you are programming in.
+-->		
 		</para>
 		<para>
-		
+A apresentação oficial de Python é 
+<blockquote>
+    <para>
+    Python é uma linguagem de programação poderosa e fácil de aprender. Ela tem estruturas de dados de alto nível e uma abordagem simples, porém eficaz, à programação orientada a objetos. A sintaxe elegante e a tipagem dinâmica, junto com seu caráter interpretado, fazem de Python a linguagem ideal para criação de scripts e desenvolvimento rápido de aplicações em muitas áreas e na maioria das plataformas.
+    </para>
+</blockquote>
+
+Discutirei detalhadamente a maioria destas característas na próxima sessão.
+
+<!--		
 		The official introduction to Python is
 		
 		<blockquote>
@@ -30,86 +41,92 @@
 		</blockquote>
 		
 		I will discuss most of these features in more detail in the next section.
-		
+-->		
 		</para>
 		<note>
-		
-		Guido van Rossum, the creator of the Python language, named the language after the
+
+Guido van Rossum, o criador da linguagem Python, batizou a linguagem com o nome do programa da BBC &quot;Monty Python's Flying Circus &quot;. Ele, particularmente, não aprecia cobras que matam animais enrolando-se neles e esmagando-os.
+
+<!--		Guido van Rossum, the creator of the Python language, named the language after the
 		BBC show &quot;Monty Python's Flying Circus &quot;. He doesn't particularly like
 		snakes that kill animals for food by winding their long bodies around them and
 		crushing them.
-		
+-->		
 		</note>
 	</section>
 	
 	<section id="features-of-python">
-		<title>Features of Python</title>
+		<title>Características do Python<!--Features of Python--></title>
 		<variablelist>
 			<varlistentry>
-				<term>Simple</term>
+				<term>Simples<!--Simple--></term>
 				<listitem>
 					<para>
-					
-					Python is a simple and minimalistic language. Reading a good
-					Python program feels almost like reading English, although very
-					strict English! This pseudo-code nature of Python is one of its
-					greatest strengths. It allows you to concentrate on the solution
-					to the problem rather than the language itself.
+Python é uma linguagem simples e minimalista. Ler um bom programa em Python é quase como ler em inglês, ainda que seja um inglês bem restrito. Este caráter de pseudo-código do Python é um de seus maiores pontos fortes. Ele permite que você se concentre na solução do problema e não na linguagem em si.					
+<!--Python is a simple and minimalistic language. Reading a good
+Python program feels almost like reading English, although very
+strict English! This pseudo-code nature of Python is one of its
+greatest strengths. It allows you to concentrate on the solution
+to the problem rather than the language itself.-->
 					
 					</para>
 				</listitem>
 			</varlistentry>
 			<varlistentry>
-				<term>Easy to Learn</term>
+				<term>Fácil de Aprender<!--Easy to Learn--></term>
 				<listitem>
 					<para>
-					
-					As you will see, Python is extremely easy to get started with.
-					Python has an extraordinarily simple syntax, as already mentioned.
+Como você verá, é extremamente fácil iniciar-se em Python. A linguagem possui uma sintaxe extraordinariamente simple, como já mencionado.
+
+<!--As you will see, Python is extremely easy to get started with.
+Python has an extraordinarily simple syntax, as already mentioned.-->
 					
 					</para>
 				</listitem>
 			</varlistentry>
 			<varlistentry>
-				<term>Free and Open Source</term>
+				<term>Livre e de Código Aberto<!--Free and Open Source--></term>
 				<listitem>
 					<para>
-					
-					Python is an example of a <acronym>FLOSS</acronym>
-					(Free/Libr&#233; and Open Source Software). In simple terms,
-					you can freely distribute copies of this software, read it's
-					source code, make changes to it, use pieces of it in new
-					free programs, and that you know you can do these things. FLOSS
-					is based on the concept of a community which shares knowledge.
-					This is one of the reasons why Python is so good - it has been
-					created and is constantly improved by a community who just want
-					to see a better Python.
+Python é um exemplo de <acronym>FLOSS</acronym> (Free/Libre and Open Source Software. Traduzindo, você pode distribuir livremente cópias deste software, ler seu código-fonte, modificá-lo, usar trechos em novos programas livres e tudo o que você quiser fazer. FLOSS é baseado no conceito de uma comunidade que compartilha conhecimento. Esta é um dos motivos pelos quais Python é tão bom - ele vem sendo criado e constantemente melhorado por uma comunidade que simplesmente que ver um Python cada vez melhor.
+				
+<!--Python is an example of a <acronym>FLOSS</acronym>
+(Free/Libre; and Open Source Software). In simple terms,
+you can freely distribute copies of this software, read it's
+source code, make changes to it, use pieces of it in new
+free programs, and that you know you can do these things. FLOSS
+is based on the concept of a community which shares knowledge.
+This is one of the reasons why Python is so good - it has been
+created and is constantly improved by a community who just want
+to see a better Python.-->
 					
 					</para>
 				</listitem>
 			</varlistentry>
 			<varlistentry>
-				<term>High-level Language</term>
+				<term>Linguagem de Alto Nível <!--High-level Language--></term>
 				<listitem>
 					<para>
-					
-					When you write programs in Python, you never need to bother about
-					the low-level details such as managing the memory used by your
-					program, etc.
+Quando você escreve programas em Python, não há necessidade de se preocupar com detalhes de baixo nível tais como manipular a memória utilizada pelo programa etc.
+
+<!--When you write programs in Python, you never need to bother about
+the low-level details such as managing the memory used by your
+program, etc.-->
 					
 					</para>
 				</listitem>
 			</varlistentry>
 			<varlistentry>
-				<term>Portable</term>
+				<term>Portável<!--Portable--></term>
 				<listitem>
 					<para>
-					
-					Due to its open-source nature, Python has been ported (i.e. changed
-					to make it work on) to many platforms. All your Python programs can
-					work on any of these platforms without requiring any changes at all
-					if you are careful enough to avoid any system-dependent features.
-					
+Por ser uma linguagem de código aberto, Python foi portada (ou seja, modificada para funcionar) em muitas plataformas. Todos os seus programas em Python podem rodar em qualquer uma destas plataformas sem precisar de mudanças, desde que você seja cuidadoso o suficiente para evitar usar características que dependam do sistema.
+<!--					
+Due to its open-source nature, Python has been ported (i.e. changed
+to make it work on) to many platforms. All your Python programs can
+work on any of these platforms without requiring any changes at all
+if you are careful enough to avoid any system-dependent features.
+-->					
 					</para>
 					<para>
 					
