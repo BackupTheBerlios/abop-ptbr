@@ -18,17 +18,19 @@
 	</copyright>
 	
 	<abstract>
-		<title>Abstract</title>
+		<title>Resumo<!--Abstract--></title>
 		<para>
-			This book will help you to learn the Python programming language, whether you
-			are new to computers or are an experienced programmer.
+                Este livro vai ajudá-lo a aprender a linguagem de programação Python, seja você iniciante com computadores ou um programador experiente.
+			<!--This book will help you to learn the Python programming language, whether you
+			are new to computers or are an experienced programmer.-->
 		</para>
 	</abstract>
 	
 	<legalnotice>
 		<para>
-			This book is released under the
-			Creative Commons Attribution-NonCommercial-ShareAlike License 2.0 .
+                Este livro está disponível sob a licença Creative Commons Attribution-NonCommercial-ShareAlike License 2.0.
+			<!--This book is released under the
+			Creative Commons Attribution-NonCommercial-ShareAlike License 2.0 .-->
 		</para>
 	</legalnotice>
 </bookinfo>
