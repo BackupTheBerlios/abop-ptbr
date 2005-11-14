@@ -1,48 +1,54 @@
 <chapter id="first-steps">
-	<title>First Steps</title>
+	<title>Primeiros Passos <!--First Steps--></title>
 	
 	<section id="first-steps-intro">
-		<title>Introduction</title>
+		<title>Introdução<!--Introduction--></title>
 		<para>
-		
+		Veremos agoras como executar um programa "Hello World" tradicional em Python. Isto vai ensiná-lo como escrever, salvar e executar programas em Python.
+                <!--
 		We will now see how to run a traditional 'Hello World' program in Python. This will
 		teach you how to write, save and run Python programs.
-		
+		-->
 		</para>
 		<para>
-		
+		Existem duas maneiras de usar Python para executar seu prorgama - usando o prompt interativo do interpretador ou usando um arquivo fonte. Veremos como usar os dois métodos.
+                <!--
 		There are two ways of using Python to run your program - using the interactive
 		interpreter prompt or using a source file. We will now see how to use both the methods.
-		
+		-->
 		</para>
 	</section>
 	<section id="interpreter-prompt">
-		<title>Using the interpreter prompt</title>
+		<title>Usando o prompt do interpretador<!--Using the interpreter prompt--></title>
 		<para>
-		
-		Start the intepreter on the command line by entering <command>python</command> at the
+                
+		Inicie o interpretador na linha de comando, digitando <command>python</command> no prompt de comando do shell. Agora digite <literal>print 'Hello World'</literal> seguido da tecla <keycap>Enter</keycap>. Você verá as palavras <computeroutput>Hello World</computeroutput> como saída.
+
+		<!--Start the intepreter on the command line by entering <command>python</command> at the
 		shell prompt. Now enter <literal>print 'Hello World'</literal> followed by the
 		<keycap>Enter</keycap> key. You should see the words
-		<computeroutput>Hello World</computeroutput> as output.
+		<computeroutput>Hello World</computeroutput> as output.-->
 		
 		</para>
 		<para>
-		
-		For Windows users, you can run the interpreter in the command line if you have set
+		Usuários de Windows podem executar o interpretador na linha de comando modificando a variável <envar>PATH</envar> para incluir o caminho da instalação do Python. Como alternativa, é possível usar o programa <acronym>IDLE</acronym> . IDLE é a sigla para Integrated DeveLopment Environment. Clique em <guimenu>Iniciar</guimenu> -> <guisubmenu>Programas</guisubmenu> -> <guisubmenu>Python 2.3</guisubmenu> -> <guisubmenu>IDLE (Python GUI)</guisubmenu>. Usuários de Linux também podem usar o IDLE.
+
+		<!--For Windows users, you can run the interpreter in the command line if you have set
 		the <envar>PATH</envar> variable appropriately. Alternatively, you can use the
 		<acronym>IDLE</acronym> program. IDLE is short for Integrated DeveLopment Environment.
 		Click on <guimenu>Start</guimenu> -> <guisubmenu>Programs</guisubmenu> ->
 		<guisubmenu>Python 2.3</guisubmenu> -> <guisubmenu>IDLE (Python GUI)</guisubmenu>.
 		Linux users can use IDLE too.
-		
+		-->
 		</para>
 		<para>
-		
-		Note that the <![CDATA[<<<]]> signs are the prompt for entering Python statements.
-		
+		Perceba que o sinais de <![CDATA[>>>]]> são o prompt de entrada de comandos do Python.
+                <!--
+		Note that the <![CDATA[>>>]]> signs are the prompt for entering Python statements.
+		-->
 		</para>
 		<example>
-			<title>Using the python interpreter prompt</title>
+			<title>Usando o prompt do interpretador <!--Using the python interpreter prompt--></title>
 			<screen>
 			<![CDATA[
 $ python
@@ -56,58 +62,72 @@ hello world
 			</screen>
 		</example>
 		<para>
-		
+		Note que Python exibe a saída da linha imediatamente. O que você acabou de digitar é um único <emphasis>comando</emphasis> do Python. Usamos <literal>print</literal> para (previsivelmente) imprimir qualquer valor que seja fornecido. Neste caso, estamos fornecendo o texto <literal>Hello World</literal>, que é logo exibido na tela.
+                <!--
 		Notice that Python gives you the output of the line immediately! What you just entered
 		is a single Python <emphasis>statement</emphasis>. We use <literal>print</literal>
 		to (unsurprisingly) print any value that you supply to it. Here, we are supplying the
 		text <literal>Hello World</literal> and this is promptly printed to the screen.
-		
+		-->
 		</para>
 		<important>
-			<title>How to quit the Python prompt</title>
+			<title>Como sair do prompt do Python<!--How to quit the Python prompt--></title>
 			<para>
-			
+			Para sair do prompt, pressione <keycombo><keycap>Ctrl</keycap><keycap>d</keycap></keycombo> se estiver usando o IDLE ou o shell do Linux/BSD. No caso do prompt de comando do Windows, pressione <keycombo><keycap>Ctrl</keycap><keycap>z</keycap></keycombo> seguido de <keycap>Enter</keycap>.
+
+                        <!--
 			To exit the prompt, press
 			<keycombo><keycap>Ctrl</keycap><keycap>d</keycap></keycombo>
 			if you are using IDLE or are using a Linux/BSD shell. In case of the Windows
 			command prompt, press <keycombo><keycap>Ctrl</keycap><keycap>z</keycap></keycombo>
 			followed by <keycap>Enter</keycap>.
-			
+			-->
 			</para>
 		</important>
 	</section>
 	<section id="choosing-an-editor">
-		<title>Choosing an Editor</title>
+		<title>Escolhendo um Editor<!--Choosing an Editor--></title>
 		<para>
-		
+		Antes de começarmos a escrever programas Python em arquivos-fonte, precisaremos de um editor. A escolha de um editor é decisiva. Você deve escolher um editor como se fosse escolher um carro para comprar. Um bom editor vai ajudá-lo a escrever programas em Python de forma fácil, fazendo sua viagem mais confortável, e a alcaçar seu destino (atingir seu objetivo) de maneira mais rápida e segura.
+                
+                <!--
 		Before we move on to writing Python programs in source files, we need an editor
 		to write the source files. The choice of an editor is crucial indeed.  You have
 		to choose an editor as you would choose a car you would buy. A good editor will
 		help you write Python programs easily, making your journey more comfortable and
 		helps you reach your destination (achieve your goal) in a much faster and safer
 		way.
-		
+		-->
 		</para>
 		<para>
 		
+                Um dos requisitos básicos de um um editor é o recurso de <emphasis role="bold">realce de sintaxe</emphasis>, no qual todas as diferentes partes do seu código são colorizadas de modo que se possa <emphasis>ver</emphasis> o programa e visualizar sua execução.
+
+                <!--
 		One of the very basic requirements is <emphasis role="bold">syntax
 		highlighting</emphasis> where all the different parts of your Python program are
 		colorized so that you can <emphasis>see</emphasis> your program and visualize its
 		running.
-		
+		-->
 		</para>
 		<para>
 		
+                Se você está usando Window, sugiro que use o IDLE. O IDLE possui recursos de realce de sintaxe e muitos outros, tais como permitir que você execute seus programa a partir do próprio IDLE, entre outros. Um lembrete especial: <emphasis role="bold">não use o Notepad (Bloco de Notas)</emphasis>. É uma escolha ruim, pois não possui realce de sintaxe e não suporta indentação de texto, o que é muito importante no nosso caso, como veremos mais adiante. Bons editores como o IDLE (e também o VIM) vão ajudá-lo automaticamente com essa tarefa.
+
+                <!--
 		If you are using Windows, then I suggest that you use IDLE. IDLE does syntax highlighting
 		and a lot more such as allowing you to run your programs within IDLE among other things.
 		A special note: <emphasis role="bold">don't use Notepad</emphasis> - it is a bad choice
 		because it does not do syntax highlighting and also importantly it does not support
 		indentation of the text which is very important in our case as we will see later. Good
 		editors such as IDLE (and also VIM) will automatically help you do this.
-		
+		-->
 		</para>
 		<para>
-		
+	
+                Se você usa Linux/BSD, então tem vários editores que pode escolher. Se você é um programador experiente, então já deve estar usando o <application>VIM </application> ou o <application>Emacs</application>. Desnecessário dizer que estes são dois dos mais poderosos editores e você terá benefícios ao usá-los para editar seus programas. Pessoalmente, uso o <application>VIM</application> para a maioria dos meus programas. Se você é um iniciante, então pode usar o <application>Kate</application>, que é um dos meus favoritos. Caso tenha vontade de dispender algum tempo aprendendo VIM ou Emacs, recomendo fortemente que aprenda ambos. Certamente será de grande utilidade a longo prazo.
+
+                <!--
 		If you are using Linux/FreeBSD, then you have a lot of choices for an editor. If you are
 		an experienced programmer, then you must be already using <application>VIM</application>
 		or <application>Emacs</application>. Needless to say, these are two of the most powerful
@@ -117,10 +137,11 @@ hello world
 		favorites. In case you are willing to take the time to learn VIM or Emacs, then I highly
 		recommend that you do learn to use either of them as it will be very useful for you in
 		the long run.
+                -->
 		
 		</para>
 		<para>
-		
+		 
 		If you still want to explore other choices of an editor, see the comprehensive
 		<ulink url="http://www.python.org/cgi-bin/moinmoin/PythonEditors">list of Python
 		editors</ulink> and make your choice. You can also choose an
