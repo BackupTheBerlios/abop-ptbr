@@ -1,19 +1,23 @@
 <chapter id="basics">
-	<title>The Basics</title>
+	<title>Noções Básicas <!--The Basics--></title>
 
 	<para>
-	
+	Apenas mostrar um "Hello World" não é o suficiente, é? Você quer fazer mais que isso. Você quer receber alguma entrada, manipulá-la e obter uma saída. Em Python, podemos fazer isso usando constantes e variáveis.
+
+        <!--
 	Just printing 'Hello World' is not enough, is it? You want to do more than that - you
 	want to take some input, manipulate it and get something out of it. We can achieve this
 	in Python using constants and variables.
-	
+	-->
 	</para>
 	
 	<section id="literal-constants">
-		<title>Literal Constants</title>
+		<title>Constantes Literais <!--Literal Constants--></title>
 		
 		<para>
-		
+		Um exemplo de constante literal é um número como <literal>5</literal>,	<literal>1.23</literal>, <literal>9.25e-3</literal> ou um string como <literal>'This is a string'</literal> or <literal><![CDATA["It's a string!"]]></literal>. São chamados de literais porque eles são <emphasis>literais</emphasis>, ou seja, você usa seus valores literalmente. O número <literal>2</literal> sempre representa a si mesmo e nada mais. Ele é uma constante porque seu valor não pode ser modificado. Dessa forma, todos esses valores são considerados constantes literais.
+                
+                <!--
 		An example of a literal constant is a number like <literal>5</literal>,
 		<literal>1.23</literal>, <literal>9.25e-3</literal> or a string like
 		<literal>'This is a string'</literal> or <literal><![CDATA["It's a string!"]]></literal>.
@@ -21,50 +25,57 @@
 		literally. The number <literal>2</literal> always represents itself and nothing else - it
 		is a constant because its value cannot be changed. Hence, all these are referred to as
 		literal constants.
-		
+		-->
 		</para>
 	</section>
 	<section id="numbers">
-		<title>Numbers</title>
+		<title>Números <!--Numbers--></title>
 		
 		<para>
-		
+		Os números em Python podem ser de quatro tipos: inteiros, inteiros longos, números de ponto flutuante e números complexos.
+                <!--
 		Numbers in Python are of four types - integers, long integers, floating point and complex
 		numbers.
-		
+		-->
 		</para>
 		<itemizedlist>
 			<listitem>
 				<para>
-				
+				Um exemplo de inteiro é o número <literal>2</literal>, que não possui parte fracionária.
+                                <!--
 				Examples of integers are <literal>2</literal> which are just whole numbers.
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-				
+				Inteiros longos são também são não possuem parte fracionária, porém podem assumir valores maiores que os inteiros comuns.
+                                <!--
 				Long integers are just bigger whole numbers.
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-				
-				Examples of floating point numbers (or <emphasis>floats</emphasis>
+				Exemplos de números de ponto flutuante são <literal>3.23</literal> e <literal>52.3E-4</literal>.	A notação <literal>E</literal> indica potências de 10. Neste caso, <literal>52.3E-4</literal> significa <literal>52.3 * 10<superscript>-4</superscript></literal>.
+				<!--
+                                Examples of floating point numbers (or <emphasis>floats</emphasis>
 				for short) are <literal>3.23</literal> and <literal>52.3E-4</literal>.
 				The <literal>E</literal> notation indicates powers of 10. In this case,
 				<literal>52.3E-4</literal> means
 				<literal>52.3 * 10<superscript>-4</superscript></literal>.
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-				
+				Exemplos de números complexos são <literal>(-5+4j)</literal> e
+				<literal>(2.3 - 4.6j)</literal>
+                                
+                                <!--
 				Examples of complex numbers are <literal>(-5+4j)</literal> and
 				<literal>(2.3 - 4.6j)</literal>
-				
+				-->
 				</para>
 			</listitem>
 		</itemizedlist>
@@ -72,47 +83,62 @@
 	<section id="strings">
 		<title>Strings</title>
 		<para>
-		
+		Uma string é uma <emphasis>seqüência</emphasis> de caracteres. Strings são basicamente um punhado de palavras.
+                <!--
 		A string is a <emphasis>sequence</emphasis> of <emphasis>characters</emphasis>. Strings
 		are basically just a bunch of words.
-		
+		-->
 		</para>
 		<para>
-		
+		Eu quase posso garantir que você usará strings em quase todos os programas em Python que você escrever. Então, preste atenção à parte seguinte. Aqui está como se usa strings em Python:
+                <!--
 		I can almost guarantee that you will be using strings in almost every Python program that
 		you write, so pay attention to the following part. Here's how you use strings in Python:
-		
+		-->
 		</para>
 		<itemizedlist>
 			<listitem>
-				<bridgehead renderas="sect5">Using Single Quotes (<literal>'</literal>)</bridgehead>
+				<bridgehead renderas="sect5">Usando Aspas Simples<!--Using Single Quotes--> (<literal>'</literal>)</bridgehead>
 				<para>
-				
+			        Você pode definir strings usando aspas simples, como em <literal>'Cite-me aqui'</literal>. Todos os espaços em branco - isto é, espaços e tabs - são preservados em da maneira em que estão.
+
+                                <!--
 				You can specify strings using single quotes such as
 				<literal>'Quote me on this'</literal> . All white space i.e. spaces and
 				tabs are preserved as-is.
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
-				<bridgehead renderas="sect5">Using Double Quotes (<literal><![CDATA["]]></literal>)</bridgehead>
+				<bridgehead renderas="sect5">Usando Aspas Duplas<!--Using Double Quotes--> (<literal><![CDATA["]]></literal>)</bridgehead>
 				<para>
-				
-				Strings in double quotes work exactly the same way as strings in single
+				Strings em aspas duplas funcionam exatamente da mesma maneira que strings em aspas simples. Um exemplo é <literal><![CDATA["Qual é o seu nome?"]]></literal>
+                                <!--
+            			Strings in double quotes work exactly the same way as strings in single
 				quotes. An example is
 				<literal><![CDATA["What's your name?"]]></literal>
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
-				<bridgehead renderas="sect5">Using Triple Quotes (<literal>'''</literal> or <literal><![CDATA["""]]></literal>)</bridgehead>
+				<bridgehead renderas="sect5">Usando Aspas Triplas<!--Using Triple Quotes--> (<literal>'''</literal> ou <literal><![CDATA["""]]></literal>)</bridgehead>
 				<para>
-				
-				You can specify multi-line strings using triple quotes. You can use single
+			        Você pode especificar strings em múltiplas linhas usando aspas triplas. É possível usar aspas simples (apóstrofos) ou aspas duplas livremente dentro das aspas triplas. Um exemplo é
+                                
+				<!--
+                                You can specify multi-line strings using triple quotes. You can use single
 				quotes and double quotes freely within the triple quotes. An example is
-				
+				-->
 				</para>
 				<programlisting>
+                                <![CDATA[
+'''Esta é uma string em múltiplas linhas. Esta é a primeira linha.
+Esta é a segunda linha.
+"Qual é o seu nome?", perguntei.
+Ele disse "Bond, James Bond."
+'''
+				]]>
+<!--
 				<![CDATA[
 '''This is a multi-line string. This is the first line.
 This is the second line.
@@ -120,12 +146,16 @@ This is the second line.
 He said "Bond, James Bond."
 '''
 				]]>
+-->                                
 				</programlisting>
 			</listitem>
 			<listitem>
-				<bridgehead renderas="sect5">Escape Sequences</bridgehead>
+				<bridgehead renderas="sect5">Seqüências de Escape <!--Escape Sequences--></bridgehead>
 				<para>
-				
+				Suponha que você tem uma string que contém uma aspa simples (<literal>'</literal>). Como você a definiria? Por exemplo, no string <literal>Quero um copo d'água</literal>. Você não pode definir <literal>'Quero um copo d'água'</literal> pois o Python ficaria confuso para saber onde a string começa e termina. Então, você tem que deixar claro que para o Python que esta aspa simples não indica o final da string. Isto pode ser feito com a ajuda do que chamamos de <emphasis>seqüência de escape</emphasis>. Devemos escrever a aspa simples como <literal>\'</literal> (note a barra invertida). Desse modo, você pode especificar a string como <literal>'Quero um copo d\'água'</literal>.
+
+                                <!--
+
 				Suppose, you want to have a string which contains a single quote
 				(<literal>'</literal>), how will you specify this string? For example,
 				the string is <literal>What's your name?</literal>. You cannot specify
@@ -136,7 +166,8 @@ He said "Bond, James Bond."
 				sequence</emphasis>. You specify the single quote as <literal>\'</literal>
 				- notice the backslash. Now, you can specify the string as
 				<literal>'What\'s your name?'</literal>.
-				
+				-->
+
 				</para>
 				<para>
 				
