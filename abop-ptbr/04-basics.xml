@@ -49,7 +49,7 @@
 			</listitem>
 			<listitem>
 				<para>
-				Inteiros longos são também são não possuem parte fracionária, porém podem assumir valores maiores que os inteiros comuns.
+				Inteiros longos também não possuem parte fracionária, porém podem assumir valores maiores que os inteiros comuns.
                                 <!--
 				Long integers are just bigger whole numbers.
 				-->
@@ -170,16 +170,20 @@ He said "Bond, James Bond."
 
 				</para>
 				<para>
-				
+			Uma outra maneira de definir esta string específica seria <literal>"Quero um copo d'água"</literal>, isto é, usando aspas duplas. De maneira similar, você deve usar uma sequência de escape para mostrar uma aspa dupla dentro de uma string definida por aspas duplas. Do mesmo modo, a própria barra invertida é indicada pela seqüência de escape <literal>\\</literal>.
+                        <!--
 				Another way of specifying this specific string would be
 				<literal>"What's your name?"</literal> i.e. using double quotes. Similarly,
 				you have to use an escape sequence forusing a double quote itself in a
 				double quoted string. Also, you have to indicate the backslash itself using
 				the escape sequence <literal>\\</literal>.
-				
+			-->	
 				</para>
 				<para>
-				
+				E se você quisesse definir uma string de duas linhas? Uma maneira é usar uma string definida por aspas triplas, conforme mostrado acima. Outra maneira seia usar uma seqüência de escape para o caracter que indica uma nova linha - <literal>\n</literal>. Um exemplo seria <literal>Esta é a primeira linha\nEsta é a segunda linha</literal>. Uma outra seqüencia de escape útil é o caracter tab - <literal>\t</literal>. Existem várias outras seqüências de escape, mas mencionei aqui apenas as mais úteis.
+
+                                <!--
+                                
 				What if you wanted to specify a two-line string? One way is to use a
 				triple-quoted string as shown above or you can use an escape sequence for
 				the newline character - <literal>\n</literal> to indicate the start of a
@@ -188,24 +192,35 @@ He said "Bond, James Bond."
 				- <literal>\t</literal>. There are many more escape sequences but I have
 				mentioned only the most useful ones here.
 				
-				</para>
+                                -->
+			
+                                </para>
 				<para>
 				
+                                Vale frisar que, numa string, uma única barra invertida ao final de uma linha indica que a string continua na próxima linha, sem que nenhuma nova linha seja adicionada. Por exemplo:
+                                <!--
 				One thing to note is that in a string, a single backslash at the end of
 				the line indicates that the string is continued in the next line, but
 				no newline is added. For example,
-				
+				-->
 				</para>
 				<programlisting>
-				<![CDATA[
+					<![CDATA[
+"Esta é a primeira frase.\
+Esta é a segunda frase."
+				]]>
+                                <!--
+<![CDATA[
 "This is the first sentence.\
 This is the second sentence."
-				]]>
+				]]>]
+                                -->
 				</programlisting>
 				<para>
-				
+				é equivalente a <literal><![CDATA["Esta é a primeira frase. Esta é a segunda frase."]]></literal>
+<!--
 				is equivalent to <literal><![CDATA["This is the first sentence. This is the second sentence."]]></literal>
-				
+-->				
 				</para>
 			</listitem>
 			<listitem>
