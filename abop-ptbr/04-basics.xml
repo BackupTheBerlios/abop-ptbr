@@ -1,8 +1,8 @@
-<chapter id="basics">
+﻿<chapter id="basics">
 	<title>Noções Básicas <!--The Basics--></title>
 
 	<para>
-	Apenas mostrar um "Hello World" não é o suficiente, é? Você quer fazer mais que isso. Você quer receber alguma entrada, manipulá-la e obter uma saída. Em Python, podemos fazer isso usando constantes e variáveis.
+	Apenas mostrar um "Hello World" não é o suficiente, não é? Você quer fazer mais que isso. Você quer receber alguma entrada, manipulá-la e obter uma saída. Em Python, podemos fazer isso usando constantes e variáveis.
 
         <!--
 	Just printing 'Hello World' is not enough, is it? You want to do more than that - you
@@ -15,7 +15,7 @@
 		<title>Constantes Literais <!--Literal Constants--></title>
 		
 		<para>
-		Um exemplo de constante literal é um número como <literal>5</literal>,	<literal>1.23</literal>, <literal>9.25e-3</literal> ou um string como <literal>'This is a string'</literal> or <literal><![CDATA["It's a string!"]]></literal>. São chamados de literais porque eles são <emphasis>literais</emphasis>, ou seja, você usa seus valores literalmente. O número <literal>2</literal> sempre representa a si mesmo e nada mais. Ele é uma constante porque seu valor não pode ser modificado. Dessa forma, todos esses valores são considerados constantes literais.
+		Um exemplo de constante literal é um número como <literal>5</literal>,	<literal>1.23</literal>, <literal>9.25e-3</literal> ou um string como <literal>'This is a string'</literal> or <literal><![CDATA["It's a string!"]]></literal>. São chamados de literais porque eles são <emphasis>literais</emphasis>, ou seja, você usa seus valores literalmente. O número <literal>2</literal> sempre representa a si próprio e nada mais. Ele é uma constante porque seu valor não pode ser modificado. Dessa forma, todos esses valores são considerados constantes literais.
                 
                 <!--
 		An example of a literal constant is a number like <literal>5</literal>,
@@ -90,7 +90,7 @@
 		-->
 		</para>
 		<para>
-		Eu quase posso garantir que você usará strings em quase todos os programas em Python que você escrever. Então, preste atenção à parte seguinte. Aqui está como se usa strings em Python:
+		Eu posso quase garantir que você usará strings em quase todos os programas em Python que você escrever. Então, preste atenção à parte seguinte. Aqui está como se usa strings em Python:
                 <!--
 		I can almost guarantee that you will be using strings in almost every Python program that
 		you write, so pay attention to the following part. Here's how you use strings in Python:
@@ -100,7 +100,7 @@
 			<listitem>
 				<bridgehead renderas="sect5">Usando Aspas Simples<!--Using Single Quotes--> (<literal>'</literal>)</bridgehead>
 				<para>
-			        Você pode definir strings usando aspas simples, como em <literal>'Cite-me aqui'</literal>. Todos os espaços em branco - isto é, espaços e tabs - são preservados em da maneira em que estão.
+			        Você pode definir strings usando aspas simples, como em <literal>'Cite-me aqui'</literal>. Todos os espaços em branco - isto é, espaços e tabs - são preservados da maneira em que estão.
 
                                 <!--
 				You can specify strings using single quotes such as
@@ -152,7 +152,7 @@ He said "Bond, James Bond."
 			<listitem>
 				<bridgehead renderas="sect5">Seqüências de Escape <!--Escape Sequences--></bridgehead>
 				<para>
-				Suponha que você tem uma string que contém uma aspa simples (<literal>'</literal>). Como você a definiria? Por exemplo, no string <literal>Quero um copo d'água</literal>. Você não pode definir <literal>'Quero um copo d'água'</literal> pois o Python ficaria confuso para saber onde a string começa e termina. Então, você tem que deixar claro que para o Python que esta aspa simples não indica o final da string. Isto pode ser feito com a ajuda do que chamamos de <emphasis>seqüência de escape</emphasis>. Devemos escrever a aspa simples como <literal>\'</literal> (note a barra invertida). Desse modo, você pode especificar a string como <literal>'Quero um copo d\'água'</literal>.
+				Suponha que você tem uma string que contém uma aspas simples (<literal>'</literal>). Como você a definiria? Por exemplo, na string <literal>Quero um copo d'água</literal>. Você não pode definir <literal>'Quero um copo d'água'</literal> pois o Python ficaria confuso para saber onde a string começa e termina. Então, você tem que deixar claro para o Python que esta aspas simples não indica o final da string. Isto pode ser feito com a ajuda do que chamamos de <emphasis>seqüência de escape</emphasis>. Devemos escrever a aspas simples como <literal>\'</literal> (note a barra invertida). Desse modo, você pode especificar a string como <literal>'Quero um copo d\'água'</literal>.
 
                                 <!--
 
