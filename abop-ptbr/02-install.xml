@@ -1,4 +1,4 @@
-<chapter id="installing-python">
+﻿<chapter id="installing-python">
 	<title>Instalando o Python<!--Installing Python--></title>
 	
 	<section id="for-linux-bsd-users">
@@ -26,6 +26,9 @@
 			<screen>
 $ python -V
 Python 2.3.4
+
+O tópico "NOTE" está em inglês
+
 			</screen>
 		</informalexample>
 		
@@ -76,7 +79,7 @@ bash: python: command not found
 			<listitem>
 				<para>
                                 
-				Instalar os pacotes binários usando o software de gerenciamento de pacotes que vem com o seu sistema operacional, tal como o <application>yum</application> no 	Fedora Linux, <application>urpmi</application> no Mandrake Linux, <application>apt-get</application> no Debian Linux, <application>pkg_add</application> no FreeBSD, etc. Observer que você precisará estar conectado à internet para usar este método.
+				Instalar os pacotes binários usando o software de gerenciamento de pacotes que vem com o seu sistema operacional, tal como o <application>yum</application> no 	Fedora Linux, <application>urpmi</application> no Mandrake Linux, <application>apt-get</application> no Debian Linux, <application>pkg_add</application> no FreeBSD, etc. Observe que você precisará estar conectado à internet para usar este método.
 
 				<!--Install the binary packages using the package management software
 				that comes with your OS, such as <application>yum</application> in
@@ -124,7 +127,7 @@ bash: python: command not found
                 
 		</para>
 		
-		<caution>
+		<cuidado>
 			<para>
 			Quando surgir a opção de desmarcar algum componente <emphasis>opcional</emphasis>, não desmarque nenhum! Alguns deles podem ser úteis para você, especialmente o IDLE.
                         <!--
@@ -133,7 +136,7 @@ bash: python: command not found
 			especially IDLE.
 			-->
 			</para>
-		</caution>
+		</cuidado>
 		
 		<para>
 	Um fato interessante é que cerca de 70% dos downloads do Python são feitos por usuários de Windows. É claro que isto não nos dá um panorama completo, uma vez que quase todos os usuários de Linux já possuem Python instalado em seus sistemas por padrão.
@@ -150,13 +153,13 @@ bash: python: command not found
 			<title>Usando o Python na linha de comando do Windows <!--Using Python in the Windows command line--></title>
 			<para>
 			
-                        Se você quer utilizar Python na a partir da linha de comando do Windows, é preciso configurar a variável PATH.
+                        Se você quer utilizar Python a partir da linha de comando do Windows, é preciso configurar a variável PATH.
                         <!--If you want to be able to use Python from the Windows command line, then you
 			need to set the PATH variable appropriately.-->
 			
 			</para>
 			<para>
-			Para Windows 2000, XP e 2003, clique em <guimenu>Painel de Controle</guimenu> -> <guisubmenu>Sistema</guisubmenu> -> <guisubmenu>Avançado</guisubmenu> -> <guimenuitem>Variáveis de Ambiente</guimenuitem>. Clique na variável chamada <emphasis role="bold">PATH</emphasis> na seção 'Variáveis de Sistema', e então selecione <guimenuitem>Editar</guimenuitem> e adicione <command>;C:\Python24</command> (sem as aspas) ao final do que já está lá. Deve ser usado o nome de diretórto onde o Python está instalado.
+			Para Windows 2000, XP e 2003, clique em <guimenu>Painel de Controle</guimenu> -> <guisubmenu>Sistema</guisubmenu> -> <guisubmenu>Avançado</guisubmenu> -> <guimenuitem>Variáveis de Ambiente</guimenuitem>. Clique na variável chamada <emphasis role="bold">PATH</emphasis> na seção 'Variáveis de Sistema', e então selecione <guimenuitem>Editar</guimenuitem> e adicione <command>;C:\Python24</command> (sem as aspas) ao final do que já está lá. Deve ser usado o nome de diretório onde o Python está instalado.
 
                         <!--For Windows 2000, XP, 2003 , click on <guimenu>Control Panel</guimenu> ->
 			<guisubmenu>System</guisubmenu> -> <guisubmenu>Advanced</guisubmenu> ->

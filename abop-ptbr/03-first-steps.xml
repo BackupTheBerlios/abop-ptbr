@@ -1,17 +1,17 @@
-<chapter id="first-steps">
+﻿<chapter id="first-steps">
 	<title>Primeiros Passos <!--First Steps--></title>
 	
 	<section id="first-steps-intro">
 		<title>Introdução<!--Introduction--></title>
 		<para>
-		Veremos agoras como executar um programa "Hello World" tradicional em Python. Isto vai ensiná-lo como escrever, salvar e executar programas em Python.
+		Veremos agora como executar um programa "Hello World" tradicional em Python. Isto vai ensiná-lo como escrever, salvar e executar programas em Python.
                 <!--
 		We will now see how to run a traditional 'Hello World' program in Python. This will
 		teach you how to write, save and run Python programs.
 		-->
 		</para>
 		<para>
-		Existem duas maneiras de usar Python para executar seu prorgama - usando o prompt interativo do interpretador ou usando um arquivo fonte. Veremos como usar os dois métodos.
+		Existem duas maneiras de usar Python para executar seu programa - usando o prompt interativo do interpretador ou usando um arquivo fonte. Veremos como usar os dois métodos.
                 <!--
 		There are two ways of using Python to run your program - using the interactive
 		interpreter prompt or using a source file. We will now see how to use both the methods.
@@ -47,7 +47,7 @@
 		Note that the <![CDATA[>>>]]> signs are the prompt for entering Python statements.
 		-->
 		</para>
-		<example>
+		<exemplo>
 			<title>Usando o prompt do interpretador <!--Using the python interpreter prompt--></title>
 			<screen>
 			<![CDATA[
@@ -60,7 +60,7 @@ hello world
 >>>
 			]]>
 			</screen>
-		</example>
+		</exemplo>
 		<para>
 		Note que Python exibe a saída da linha imediatamente. O que você acabou de digitar é um único <emphasis>comando</emphasis> do Python. Usamos <literal>print</literal> para (previsivelmente) imprimir qualquer valor que seja fornecido. Neste caso, estamos fornecendo o texto <literal>Hello World</literal>, que é logo exibido na tela.
                 <!--
@@ -88,7 +88,7 @@ hello world
 	<section id="choosing-an-editor">
 		<title>Escolhendo um Editor<!--Choosing an Editor--></title>
 		<para>
-		Antes de começarmos a escrever programas Python em arquivos-fonte, precisaremos de um editor. A escolha de um editor é decisiva. Você deve escolher um editor como se fosse escolher um carro para comprar. Um bom editor vai ajudá-lo a escrever programas em Python de forma fácil, fazendo sua viagem mais confortável, e a alcaçar seu destino (atingir seu objetivo) de maneira mais rápida e segura.
+		Antes de começarmos a escrever programas Python em arquivos-fonte, precisaremos de um editor. A escolha de um editor é decisiva. Você deve escolher um editor como se fosse escolher um carro para comprar. Um bom editor vai ajudá-lo a escrever programas em Python de forma fácil, fazendo sua viagem mais confortável, e a alcançar seu destino (atingir seu objetivo) de maneira mais rápida e segura.
                 
                 <!--
 		Before we move on to writing Python programs in source files, we need an editor
@@ -101,7 +101,7 @@ hello world
 		</para>
 		<para>
 		
-                Um dos requisitos básicos de um um editor é o recurso de <emphasis role="bold">realce de sintaxe</emphasis>, no qual todas as diferentes partes do seu código são colorizadas de modo que se possa <emphasis>ver</emphasis> o programa e visualizar sua execução.
+                Um dos requisitos básicos de um editor é o recurso de <emphasis role="bold">realce de sintaxe</emphasis>, no qual todas as diferentes partes do seu código são colorizadas de modo que se possa <emphasis>ver</emphasis> o programa e visualizar sua execução.
 
                 <!--
 		One of the very basic requirements is <emphasis role="bold">syntax
@@ -112,7 +112,7 @@ hello world
 		</para>
 		<para>
 		
-                Se você está usando Window, sugiro que use o IDLE. O IDLE possui recursos de realce de sintaxe e muitos outros, tais como permitir que você execute seus programa a partir do próprio IDLE, entre outros. Um lembrete especial: <emphasis role="bold">não use o Notepad (Bloco de Notas)</emphasis>. É uma escolha ruim, pois não possui realce de sintaxe e não suporta indentação de texto, o que é muito importante no nosso caso, como veremos mais adiante. Bons editores como o IDLE (e também o VIM) vão ajudá-lo automaticamente com essa tarefa.
+                Se você está usando Windows, sugiro que use o IDLE. O IDLE possui recursos de realce de sintaxe e muitos outros, tais como permitir que você execute seus programa a partir do próprio IDLE, entre outros. Um lembrete especial: <emphasis role="bold">não use o Notepad (Bloco de Notas)</emphasis>. É uma escolha ruim, pois não possui realce de sintaxe e não suporta indentação de texto, o que é muito importante no nosso caso, como veremos mais adiante. Bons editores como o IDLE (e também o VIM) vão ajudá-lo automaticamente com essa tarefa.
 
                 <!--
 		If you are using Windows, then I suggest that you use IDLE. IDLE does syntax highlighting
@@ -141,7 +141,7 @@ hello world
 		
 		</para>
 		<para>
-		Se ainda assim você quiser explorar outras opeções de editor, veja a <ulink url="http://www.python.org/cgi-bin/moinmoin/PythonEditors">lista de editores para Python</ulink> e faça sua escolha. Você ainda pode escolhe uma <acronym>IDE</acronym> (Integrated Development Environment, ou Ambiente Integrado de Desenvolvimento) para Python. Veja a <ulink url="http://www.python.org/cgi-bin/moinmoin/IntegratedDevelopmentEnvironments">lista de IDEs que dão suporte a Python</ulink> para mais detalhes. Uma vez que voc começar a escrever programas extensos, as IDEs podem tornar-se bastante úteis.
+		Se ainda assim você quiser explorar outras opções de editor, veja a <ulink url="http://www.python.org/cgi-bin/moinmoin/PythonEditors">lista de editores para Python</ulink> e faça sua escolha. Você ainda pode escolher uma <acronym>IDE</acronym> (Integrated Development Environment, ou Ambiente Integrado de Desenvolvimento) para Python. Veja a <ulink url="http://www.python.org/cgi-bin/moinmoin/IntegratedDevelopmentEnvironments">lista de IDEs que dão suporte a Python</ulink> para mais detalhes. Uma vez que você começar a escrever programas extensos, as IDEs podem tornar-se bastante úteis.
 
                 <!--
 		If you still want to explore other choices of an editor, see the comprehensive
@@ -194,7 +194,7 @@ hello world
 		<filename>helloworld.py</filename>
 		-->
 		</para>
-		<example>
+		<exemplo>
 			<title>Usando um Arquivo Fonte<!--Using a Source File--></title>
 			<programlisting>
 			<![CDATA[
@@ -206,7 +206,7 @@ print 'Hello World'
 			<para>
 				(Arquivo fonte: <ulink url="code/helloworld.py">code/helloworld.py</ulink>)
 			</para>
-		</example>
+		</exemplo>
 		<para>
 		Execute este programa abrindo um shell (terminal do Linux ou prompt do DOS/Windows) e digitando o comando <command>python <replaceable>helloworld.py</replaceable></command>. Se você estiver usando o IDLE, use o item de menu <guimenu>Edit</guimenu> -> <guimenuitem>Run Script</guimenuitem> ou o atalho de teclado <keycombo><keycap>Ctrl</keycap><keycap>F5</keycap></keycombo>. A saída é mostrada abaixo.
                 <!--
@@ -235,7 +235,7 @@ Hello World
 		-->
 		</para>
 		<para>
-		Caso você tenha recebido uma mensagem de erro, por favor digite o programa acima <emphasis>exatamente</emphasis> como está exibido e execute-o novamente. Note que o Python é case-sensitive (sensível à caixa), ou seja, <literal>print</literal> não é o mesmo que <literal>Print</literal>. Perceba a caixa baixa <literal>p</literal> na primeira e a caixa alta <literal>P</literal> na segunda. Além disso, certifique-se de que não existam espaços ou tabs antes do primeiro caracter de cara linha. Veremos porque isto é imporante mais tarde.
+		Caso você tenha recebido uma mensagem de erro, por favor digite o programa acima <emphasis>exatamente</emphasis> como está exibido e execute-o novamente. Note que o Python é case-sensitive (sensível à caixa), ou seja, <literal>print</literal> não é o mesmo que <literal>Print</literal>. Perceba a caixa baixa <literal>p</literal> na primeira e a caixa alta <literal>P</literal> na segunda. Além disso, certifique-se de que não existam espaços ou tabs antes do primeiro caracter de cada linha. Veremos porque isto é importante mais tarde.
 
                 <!--
 		In case you got an error, please type the above program <emphasis>exactly</emphasis> as
@@ -250,7 +250,7 @@ Hello World
 		<section>
 			<title>Como Funciona<!--How It Works--></title>
 			<para>
-			Vamos considerar as primeiras duas linhas do programa. Elas são chamadas de <emphasis>comentários</emphasis>. Qualquer coisa à direita do símbolo <literal>#</literal> é um comentário e sua principal utilidade é como uma nota ou lembrete para que lê o programa.
+			Vamos considerar as primeiras duas linhas do programa. Elas são chamadas de <emphasis>comentários</emphasis>. Qualquer coisa à direita do símbolo <literal>#</literal> é um comentário e sua principal utilidade é como uma nota ou lembrete para quem lê o programa.
 
                         <!--
 			Let us consider the first two lines of the program. These are called
@@ -259,7 +259,7 @@ Hello World
 			-->
 			</para>
 			<para>
-			Python não usa os comentários, a não ser pelo caso especial dessa primeira linha. Ela é conhecida como <emphasis>linha shabang</emphasis>. Sempre que os dois primeiros caracteres do arquivo fonte forem <literal>#!</literal>, seguidos pelo caminha de um programa, isto dirá ao Linux/Unix que o código deve ser executado pelo interpretador indicado quando for chamado. Isto será explicado em detalhes na <link linkend="executable-python-programs">próxima seção</link>. Note que você sempre poderá executar o programa em qualquer plataforma especificando o interpretador diretamente na linha de comando, como em <command>python <replaceable>helloworld.py</replaceable></command> .
+			Python não usa os comentários, a não ser pelo caso especial dessa primeira linha. Ela é conhecida como <emphasis>linha shabang</emphasis>. Sempre que os dois primeiros caracteres do arquivo fonte forem <literal>#!</literal>, seguidos pelo caminho de um programa, isto dirá ao Linux/Unix que o código deve ser executado pelo interpretador indicado quando for chamado. Isto será explicado em detalhes na <link linkend="executable-python-programs">próxima seção</link>. Note que você sempre poderá executar o programa em qualquer plataforma especificando o interpretador diretamente na linha de comando, como em <command>python <replaceable>helloworld.py</replaceable></command> .
 
                         <!--
 			Python does not use comments except for the special case of the first line here.
@@ -273,7 +273,7 @@ Hello World
 			<command>python <replaceable>helloworld.py</replaceable></command> .
 			-->
 			</para>
-			<important>
+			<importante>
 				<para>
         			Use comentários de forma sensata em seu programa para explicar detalhes importantes. Isto é muito útil para os leitores para que eles possam entender com facilidade o que ele faz. Lembre-se que esta pessoa pode ser você mesmo daqui a seis meses!
                                 <!--
@@ -283,10 +283,10 @@ Hello World
 				can be yourself after six months!
 				-->
 				</para>
-			</important>
+			</importante>
 			
 			<para>
-			Os comentários são seguidos por um <emphasis>comando</emphasis> Python. Ele simplesmente exibe o texto <literal>"Hello World"</literal>. O <literal>print</literal> é na verdade um operador e <literal>"Hello World"</literal> é considerado com um string. Não se preocupe, vamos explorar estas terminologias em detalhe mais à frente.
+			Os comentários são seguidos por um <emphasis>comando</emphasis> Python. Ele simplesmente exibe o texto <literal>"Hello World"</literal>. O <literal>print</literal> é na verdade um operador e <literal>"Hello World"</literal> é considerado como uma string. Não se preocupe, vamos explorar estas terminologias em detalhe mais à frente.
 
                         <!--
 			The comments are followed by a Python <emphasis>statement</emphasis> - this just
@@ -300,7 +300,7 @@ Hello World
 	<section id="executable-python-programs">
 		<title>Programas Python Executáveis<!--Executable Python programs--></title>
 		<para>
-		Isto se aplica apenas a usuaŕios Linux/Unix, mas os usuários de Windows também poder ter curiosidade sobre a primeira linha do programa. Primeiramente, precisamos dar permissões ao programa executável, usando o comando <command>chmod</command> e só então <emphasis>executar</emphasis> o programa fonte.
+		Isto se aplica apenas a usuaŕios Linux/Unix, mas os usuários de Windows também podem ter curiosidade sobre a primeira linha do programa. Primeiramente, precisamos dar permissões ao programa executável, usando o comando <command>chmod</command> e só então <emphasis>executar</emphasis> o programa fonte.
 
                 <!--
 		This applies only to Linux/Unix users but Windows users might be curious as well
@@ -329,7 +329,7 @@ Hello World
 		-->
 		</para>
 		<para>
-		Para deixar as coisas mais divertidas, você pode renomear o arquivo para apenas <filename>helloworld</filename>, executá-lo como <command>./helloworld</command> e ele funcionará da mesma forma, uma vez que o sistema saber que tem que executar o programa utilizando o interpretador cuja localização está especificada na primeira linha do arquivo.
+		Para deixar as coisas mais divertidas, você pode renomear o arquivo para apenas <filename>helloworld</filename>, executá-lo como <command>./helloworld</command> e ele funcionará da mesma forma, uma vez que o sistema sabe que tem que executar o programa utilizando o interpretador cuja localização está especificada na primeira linha do arquivo.
 
                 <!--
 		To make things more fun, you can rename the file to just <filename>helloworld</filename>
@@ -339,7 +339,7 @@ Hello World
 		-->
 		</para>
 		<para>
-		Agora você está apto a executar o programa, desde que saiba seu caminho exato. Mas, e se você quiser ser capaz de executá-lo de a partir de qualquer diretório? Você poder fazer isto salvando o programa em um dos diretórios listados na variável de ambiente <envar>PATH</envar>. Sempre que você executa um programa, o sistema procura por ele em cada um dos diretórios listados em <envar>PATH</envar>. Podemos tornar o programa disponível a partir de qualquer lugar simplesmente copiando seu arquivo fonte para um dos diretórios listados em <envar>PATH</envar>.
+		Agora você está apto a executar o programa, desde que saiba seu caminho exato. Mas, e se você quiser ser capaz de executá-lo a partir de qualquer diretório? Você pode fazer isto salvando o programa em um dos diretórios listados na variável de ambiente <envar>PATH</envar>. Sempre que você executa um programa, o sistema procura por ele em cada um dos diretórios listados em <envar>PATH</envar>. Podemos tornar o programa disponível a partir de qualquer lugar simplesmente copiando seu arquivo fonte para um dos diretórios listados em <envar>PATH</envar>.
                 <!--
 		You are now able to run the program as long as you know the exact path of the program
 		- but what if you wanted to be able to run the program from anywhere? You can do this
@@ -360,7 +360,7 @@ Hello World
 		]]>
 		</screen>
 		<para>
-		Podemos ver o conteúdo da variável <envar>PATH</envar> usando o comando <command>echo</command> e adicionando o prefixo <literal>$</literal> para indicar para o shell que queremos o valor desta variável. Vemos que <filename>/home/swaroop/bin</filename> é um dos diretórios que estão na variável PATH, onde <emphasis role="bold">swaroop</emphasis> é meu nome de usuário e estou usando meu sistema. Normalmente existe um diretório similar para seu nome de usuário no seu sistema. Alternativamente, você pode adicionar um diretório de sua escolha à variável <envar>PATH</envar>. Isto pode ser feito através do comando <command>PATH=$PATH:/home/swaroop/mydir</command> onde <literal>'/home/swaroop/mydir'</literal> é o diretório que quero acrescentar à variável <envar>PATH</envar>.
+		Podemos ver o conteúdo da variável <envar>PATH</envar> usando o comando <command>echo</command> e adicionando o prefixo <literal>$</literal> para indicar para o shell que queremos o valor desta variável. Vemos que <filename>/home/swaroop/bin</filename> é um dos diretórios que estão na variável PATH, onde <emphasis role="bold">swaroop</emphasis> é o nome de usuário que estou usando em meu sistema. Normalmente existe um diretório similar para seu nome de usuário no seu sistema. Alternativamente, você pode adicionar um diretório de sua escolha à variável <envar>PATH</envar>. Isto pode ser feito através do comando <command>PATH=$PATH:/home/swaroop/mydir</command> onde <literal>'/home/swaroop/mydir'</literal> é o diretório que quero acrescentar à variável <envar>PATH</envar>.
                 
                 <!--
 		We can display the <envar>PATH</envar> variable using the <command>echo</command>
@@ -377,7 +377,7 @@ Hello World
 		-->
 		</para>
 		<para>
-		Este método é muito útil quando se precisa escrever scripts utilitários que executem o programa a qualquer momentoe a partir de qualquer lugar. É como criar seus próprios comandos, como por exemplo o <command>cd</command> ou quaisquer outros comandos que você usa em seu terminal Linux ou prompt do DOS.
+		Este método é muito útil quando se precisa escrever scripts utilitários que executem o programa a qualquer momento, e a partir de qualquer lugar. É como criar seus próprios comandos, como por exemplo o <command>cd</command> ou quaisquer outros comandos que você usa em seu terminal Linux ou prompt do DOS.
 
                 <!--
 		This method is very useful if you want to write useful scripts that you want to run
@@ -386,19 +386,19 @@ Hello World
 		DOS prompt.
 		-->
 		</para>
-		<caution>
+		<cuidado>
 			<para>
                         Um programa, um script ou um software significam a mesma coisa.
 			<!--
 			W.r.t. Python, a program or a script or software all mean the same thing.
 			-->
 			</para>
-		</caution>
+		</cuidado>
 	</section>
 	<section id="getting-help">
 		<title>Obtendo Ajuda<!--Getting Help--></title>
 		<para>
-		Se você precisar de informações rápidas sobre qualquer função ou comando em Python, é possível usar a funcionalidade de <literal>help</literal> embutida. Esta funcionalidade é bastante útil, escpecialmente quando se está usando o prompt do interpretador. Como exemplo, execute o comando <literal>help(str)</literal>. Ele exibirá a ajuda para a classe <literal>str</literal>, que é utilizada para armazenar todos os textos (string) que forem usados em seu programa. As classes serão explicadas em detalhe no capítulo sobre programação orientada a objetos.
+		Se você precisar de informações rápidas sobre qualquer função ou comando em Python, é possível usar a funcionalidade de <literal>help</literal> embutida. Esta funcionalidade é bastante útil, especialmente quando se está usando o prompt do interpretador. Como exemplo, execute o comando <literal>help(str)</literal>. Ele exibirá a ajuda para a classe <literal>str</literal>, que é utilizada para armazenar todos os textos (string) que forem usados em seu programa. As classes serão explicadas em detalhe no capítulo sobre programação orientada a objetos.
 
                 <!--
 		If you need quick information about any function or statement in Python, then you can
@@ -409,14 +409,14 @@ Hello World
 		the chapter on object-oriented programming. -->
 		
 		</para>
-		<note>
+		<nota>
 			<para>
 			Pressione <keycap>q</keycap> para sair da ajuda.
                         <!--
 			Press <keycap>q</keycap> to exit the help.
 			-->
 			</para>
-		</note>
+		</nota>
 		<para>
 		De maneira similar, é possível obter informação sobre quase qualquer coisa em Python. Use <literal>help()</literal> para aprender mais sobre como usar o próprio <literal>help</literal>.
 
@@ -465,7 +465,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 	<section id="first-steps-summary">
 		<title>Resumo<!--Summary--></title>
 		<para>
-		Agora você já deve estar apro a escrever, salvar e executar programas em Python com facilidade. Agora que você é um usuário de Python, vamos aprender mais alguns conceitos.
+		Agora você já deve estar apto a escrever, salvar e executar programas em Python com facilidade. Agora que você é um usuário de Python, vamos aprender mais alguns conceitos.
 
                 <!--
 		You should now be able to write, save and run Python programs at ease. Now that you

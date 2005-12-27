@@ -1,4 +1,4 @@
-<chapter id="introduction">
+﻿<chapter id="introduction">
 	<title>Introdução<!--Introduction--></title>
 	
 	<section id="introduction-section">
@@ -16,7 +16,7 @@ you are programming in.
 -->		
 		</para>
 		<para>
-A apresentação oficial de Python é 
+A apresentação oficial de Python é: 
 <blockquote>
     <para>
     Python é uma linguagem de programação poderosa e fácil de aprender. Ela tem estruturas de dados de alto nível e uma abordagem simples, porém eficaz, à programação orientada a objetos. A sintaxe elegante e a tipagem dinâmica, junto com seu caráter interpretado, fazem de Python a linguagem ideal para criação de scripts e desenvolvimento rápido de aplicações em muitas áreas e na maioria das plataformas.
@@ -24,9 +24,10 @@ A apresentação oficial de Python é
 </blockquote>
 
 Discutirei detalhadamente a maioria destas característas na próxima sessão.
-
+ 
+ O Tópico "NOTE" está em inglês
 <!--		
-		The official introduction to Python is
+		The official introduction to Python is:
 		
 		<blockquote>
 			<para>
@@ -56,7 +57,7 @@ Guido van Rossum, o criador da linguagem Python, batizou a linguagem com o nome 
 	</section>
 	
 	<section id="features-of-python">
-		<title>Características do Python<!--Features of Python--></title>
+		<title>Características de Python<!--Features of Python--></title>
 		<variablelist>
 			<varlistentry>
 				<term>Simples<!--Simple--></term>
@@ -76,7 +77,7 @@ to the problem rather than the language itself.-->
 				<term>Fácil de Aprender<!--Easy to Learn--></term>
 				<listitem>
 					<para>
-Como você verá, é extremamente fácil iniciar-se em Python. A linguagem possui uma sintaxe extraordinariamente simple, como já mencionado.
+Como você verá, é extremamente fácil iniciar-se em Python. A linguagem possui uma sintaxe extraordinariamente simples, como já mencionado.
 
 <!--As you will see, Python is extremely easy to get started with.
 Python has an extraordinarily simple syntax, as already mentioned.-->
@@ -88,7 +89,7 @@ Python has an extraordinarily simple syntax, as already mentioned.-->
 				<term>Livre e de Código Aberto<!--Free and Open Source--></term>
 				<listitem>
 					<para>
-Python é um exemplo de <acronym>FLOSS</acronym> (Free/Libre and Open Source Software. Traduzindo, você pode distribuir livremente cópias deste software, ler seu código-fonte, modificá-lo, usar trechos em novos programas livres e tudo o que você quiser fazer. FLOSS é baseado no conceito de uma comunidade que compartilha conhecimento. Esta é um dos motivos pelos quais Python é tão bom - ele vem sendo criado e constantemente melhorado por uma comunidade que simplesmente que ver um Python cada vez melhor.
+Python é um exemplo de <acronym>FLOSS</acronym> (Free/Libre and Open Source Software. Traduzindo, você pode distribuir livremente cópias deste software, ler seu código-fonte, modificá-lo, usar trechos em novos programas livres e tudo o que você quiser fazer. FLOSS é baseado no conceito de uma comunidade que compartilha conhecimento. Este é um dos motivos pelos quais Python é tão bom - ele vem sendo criado e constantemente melhorado por uma comunidade que simplesmente quer ver a Python cada vez melhor.
 				
 <!--Python is an example of a <acronym>FLOSS</acronym>
 (Free/Libre; and Open Source Software). In simple terms,
@@ -107,7 +108,7 @@ to see a better Python.-->
 				<term>Linguagem de Alto Nível <!--High-level Language--></term>
 				<listitem>
 					<para>
-Quando você escreve programas em Python, não há necessidade de se preocupar com detalhes de baixo nível tais como manipular a memória utilizada pelo programa etc.
+Quando você escreve programas em Python, não há necessidade de se preocupar com detalhes de baixo nível tais como manipular a memória utilizada pelo programa, etc.
 
 <!--When you write programs in Python, you never need to bother about
 the low-level details such as managing the memory used by your
@@ -159,7 +160,7 @@ and starts running it. -->
 					
 					</para>
 					<para id="python-vm">
-Python, por sua vez, não necessita de compilação para código binário. Você simplemente <emphasis>executa</emphasis> o programa diretamente do código-fonte. Internamente, Python converte o código-fonte em um formato intermediário chamado bytecode, o traduz para a linguagem nativa do seu computador e então o executa. Tudo isso, na verdade, torna Python muito mais fácil, uma vez que você não precisa se preocupar com a compilação do programa, certificar-se que as bibliotecas necessárias estão todas linkeditadas e carregadas etc, etc. Isto também torna seus programas em Python muito mais portáveis, já que você pode simplesmente copiar seu programa em Python em outro computador e e funciona!
+Python, por sua vez, não necessita de compilação para código binário. Você simplemente <emphasis>executa</emphasis> o programa diretamente do código-fonte. Internamente, Python converte o código-fonte em um formato intermediário chamado bytecode, o traduz para a linguagem nativa do seu computador e então o executa. Tudo isso, na verdade, torna Python muito mais fácil, uma vez que você não precisa se preocupar com a compilação do programa, certificar-se que as bibliotecas necessárias estão todas linkeditadas e carregadas etc, etc. Isto também torna seus programas em Python muito mais portáveis, já que você pode simplesmente copiar seu programa em Python em outro computador e executá-lo!
 
 <!--Python, on the other hand, does not need compilation to binary.
 You just <emphasis>run</emphasis> the program directly from the source
@@ -211,7 +212,7 @@ Python program. -->
 				<term>Embarcável<!--Embeddable--></term>
 				<listitem>
 					<para>
-Você pode embarcar Pyhton em seus programas C/C++ para fornecer funcionalidades de scripting aos usuário dos programas.
+Você pode embarcar Pyhton em seus programas C/C++ para fornecer funcionalidades de scripting aos usuários dos programas.
 
 <!--You can embed Python within your C/C++ programs to give 'scripting'
 capabilities for your program's users.-->

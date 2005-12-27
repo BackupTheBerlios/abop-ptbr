@@ -1,4 +1,4 @@
-<preface id="preface">
+﻿<preface id="preface">
 	<title>Prefácio<!--Preface--></title>
 	
 	<para>
@@ -72,7 +72,7 @@
 			<!--Then, I started searching for a good book on Python. I couldn't find any! I did find some O'Reilly books but they were either too expensive or were more like a reference manual than a guide. So, I settled for the documentation that came with Python. However, it was too brief and small. It did give a good idea about Python but was not complete. I managed with it since I had previous programming experience, but it was unsuitable for newbies.-->
 		</para>
 		<para>
-		Cerca de seis meses após meu primeiro contato com Python, instalei a versão mais recente (até então) do Red Hat Linux 9.0 e estava brincando  com o KWord. Fiquei animado e, repentinamente, veio a idéia de escrever alguma coisa sobre Python. Comecei a escrevendo algumas páginas, mas rapidamente o texto ficou com trinta páginas. Então, resolvi levar a sério o propósito de torná-lo mais útil colocando-o em formato de livro. Depois  de reescrevê-lo <emphasis>muitas </emphasis> vezes, cheguei a um estágio em que o texto tinha se tornado um guia útil para o aprendizado de Python. Considero este livro minha contribuição e tributo à comunidade open source.
+		Cerca de seis meses após meu primeiro contato com Python, instalei a versão mais recente (até então) do Red Hat Linux 9.0 e estava brincando  com o KWord. Fiquei animado e, repentinamente, veio a idéia de escrever alguma coisa sobre Python. Comecei escrevendo algumas páginas, mas rapidamente o texto ficou com trinta páginas. Então, resolvi levar a sério o propósito de torná-lo mais útil colocando-o em formato de livro. Depois  de reescrevê-lo <emphasis>muitas </emphasis> vezes, cheguei a um estágio em que o texto tinha se tornado um guia útil para o aprendizado de Python. Considero este livro minha contribuição e tributo à comunidade open source.
 
 			<!--About six months after my first brush with Python, I installed the (then) latest Red Hat 9.0 Linux and I was playing around with KWord. I got excited about it and suddenly got the idea of writing some stuff on Python. I started writing a few pages but it quickly became 30 pages long. Then, I became serious about making it more useful in a book form. After a <emphasis>lot</emphasis> of rewrites, it has reached a stage where it has become a useful guide to learning the Python language. I consider this book to be my contribution and tribute to the open source community.-->
 		</para>
