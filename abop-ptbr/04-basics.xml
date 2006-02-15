@@ -226,152 +226,176 @@ This is the second sentence."
 			<listitem>
 				<bridgehead renderas="sect5">Raw Strings</bridgehead>
 				<para>
-				
+				Se você precisa definir algumas strings sem qualquer processamento especial, tal qual a manipulação de seqüencias de escape, então você precisa definir uma <emphasis>raw</emphasis> string através dos prefixos <literal>r</literal> ou <literal>R</literal>. Um exemplo seria <literal>r"Novas linhas são indicadas por \n"</literal>.
+                                
+                                <!--
 				If you need to specify some strings where no special processing such as
 				escape sequences are handled, then what you need is to specify a
 				<emphasis>raw</emphasis> string by prefixing <literal>r</literal> or
 				<literal>R</literal> to the string. An example is
 				<literal>r"Newlines are indicated by \n"</literal>.
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
-				<bridgehead renderas="sect5">Unicode Strings</bridgehead>
-				<para>
-				
+				<bridgehead renderas="sect5">Strings Unicode <!--Unicode Strings--></bridgehead>
+				<para>                                
+				Unicode é um modo padrão de escrever texto internacional. Se você quer escrever texto em seu idioma nativo, tal como Hindi ou Árabe, então você precisa de um editor de texto com suporte a Unicode. Similarmente, Python permite que você manipule texto Unicode - tudo o que você precisa é prefixar a string com <literal>u</literal> ou <literal>U</literal>. Por exemplo, <literal><![CDATA[u"Esta é uma string Unicode."]]></literal>.
+
+                               <!-- 
 				Unicode is a standard way of writing international text. If you want to
 				write text in your native language such as Hindi or Arabic, then you need
 				to have a Unicode-enabled text editor. Similarly, Python allows you to
 				handle Unicode text - all you need to do is prefix <literal>u</literal>
 				or <literal>U</literal>. For example,
 				<literal><![CDATA[u"This is a Unicode string."]]></literal>.
-				
+				-->
 				</para>
-				<para>
-				
+				<para>			
+                                Lembre-se de usar strings Unicode quando estiver lidando com arquivos texto, especialmente quando você sabe que o arquivo vai conter texto em outros idiomas que não o inglês.
+                                <!--
 				Remember to use Unicode strings when you are dealing with text files,
 				especially when you know that the file will contain text written in
 				languages other than English.
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
-				<bridgehead renderas="sect5">Strings are immutable</bridgehead>
+				<bridgehead renderas="sect5">Strings são imutáveis <!--Strings are immutable--></bridgehead>
 				<para>
-				
+                                Isto significa que, uma vez criada a string, você não pode modificá-la. Embora isto possa parecer uma coisa ruim, na verdade não é. Nos vários programas que veremos mais adiante, descobriremos que isto não é uma limitação.
+				<!--
 				This means that once you have created a string, you cannot change it.
 				Although this might seem like a bad thing, it really isn't. We will see
 				why this is not a limitation in the various programs that we see later on.
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
-				<bridgehead renderas="sect5">String literal concatenation</bridgehead>
+				<bridgehead renderas="sect5">Concatenação de literais string <!--String literal concatenation--></bridgehead>
 				<para>
-				
-				If you place two string literals side by side, they are automatically
+				Se você posiciona dois literais string lado a lado, eles são concatenados automaticamente pelo Python. Por exemplo, <literal>'Qual é' 'o seu nome?'</literal> é convertido automaticamente para <literal><![CDATA["Qual é o seu nome?"]]></literal>.
+
+				<!--
+                                If you place two string literals side by side, they are automatically
 				concatenated by Python. For example, <literal>'What\'s' 'your name?'</literal>
 				is automatically converted in to <literal><![CDATA["What's your name?"]]></literal>.
+                                -->
 				
 				</para>
 			</listitem>
 		</itemizedlist>
 		<note>
-			<title>Note for C/C++ Programmers</title>
+			<title>Nota para programadores C/C++ <!--Note for C/C++ Programmers--></title>
 			<para>
-			
-			There is no separate <classname>char</classname> data type in Python. There is
+			Em Python não existe um tipo de dado <classname>char</classname> à parte. Não há necessidade real para ele e eu estou certo de que você não sentirá falta.
+
+			<!--
+                        There is no separate <classname>char</classname> data type in Python. There is
 			no real need for it and I am sure you won't miss it.
-			
+			-->
 			</para>
 		</note>
 		<note>
-			<title>Note for Perl/PHP Programmers</title>
+			<title>Nota para programadores Perl/PHP <!-- Note for Perl/PHP Programmers--></title>
 			<para>
-			
+			Lembre-se de que strings de aspas simples e de aspas duplas são iguais - elas não diferem em nenhum aspecto.
+                        <!--
 			Remember that single-quoted strings and double-quoted strings are the same - they
 			do not differ in any way.
-			
+			-->
 			</para>
 		</note>
 		<note>
-			<title>Note for Regular Expression Users</title>
+			<title>Nota para usuários de Expressões Regulares <!--Note for Regular Expression Users--></title>
 			<para>
-			
+			Sempre use raw strings quando estiver lidando com expressões regulares. Do contrário, pode ser preciso tratar a barra invertida com muita freqüência. Por exemplo, <literal>'\\1'</literal> é o mesmo que <literal>r'\1'</literal>.
+
+                        <!--
 			Always use raw strings when dealing with regular expressions. Otherwise, a lot of
 			backwhacking may be required. For example, backreferences can be referred to as
 			<literal>'\\1'</literal> or <literal>r'\1'</literal>.
-			
+			-->
 			</para>
 		</note>
 	</section>
 	<section id="variables">
-		<title>Variables</title>
+		<title>Variáveis <!--Variables--></title>
 		<para>
-		
+                Usar somente constantes literais pode ser tornar rapidamente incômodo - precisamos de alguma maneira de armazenar informação, bem como manipulá-la. É aí onde as <emphasis>variáveis</emphasis> entram em cena. Variáveis são exatamente o que seu nome diz - seu valor pode variar, ou seja, você pode armazenar qualquer coisa utilizando uma variável. Variáveis nada mais são que partes da memória do seu computador onde você armazena alguma informação. Ao contrário das constantes literais, você precisa de alguma jeito de acessar estas variáveis, e é por isso que você dá nomes a elas.
+		<!--
 		Using just literal constants can soon become boring - we need some way of storing any
 		information and manipulate them as well. This is where <emphasis>variables</emphasis>
 		come into the picture. Variables are exactly what they mean - their value can vary i.e.
 		you can store anything using a variable. Variables are just parts of your computer's
 		memory where you store some information. Unlike literal constants, you need some method
 		of accessing these variables and hence you give them names.
-		
+		-->
 		</para>
 	</section>
 	<section id="identifier">
-		<title>Identifier Naming</title>
+		<title>Nomeando Identificadores <!--Identifier Naming--></title>
 		
 		<para>
-		
+		Variáveis são exemplos de identificadores. <emphasis>Identificadores</emphasis> são nomes dados para identificar <emphasis>algo</emphasis>. Existem algumas regras que você tem que seguir para nomear identificadores:
+                <!--
 		Variables are examples of identifiers. <emphasis>Identifiers</emphasis> are names given
 		to identify <emphasis>something</emphasis>. There are some rules you have to follow for
 		naming identifiers:
-		
+		-->
 		</para>
 		
 		<itemizedlist>
 			<listitem>
 				<para>
-				
+				O primeiro caracter do identificador deve ser uma letra do alfabeto (maiúscula ou minúscula) ou um underscore ('_').
+                                <!--
 				The first character of the identifier must be a letter of the alphabet
 				(upper or lowercase) or an underscore ('_').
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-				
+				O restante do nome do identificador pode consistir de letras (maiúsculas ou minúsculas), underscores ('_') ou dígitos (0-9).
+                                <!--
 				The rest of the identifier name can consist of letters (upper or lowercase),
 				underscores ('_') or digits (0-9).
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-				
+				Nomes de identificadores são sensíveis à caixa. Por exemplo, <literal>meunone</literal> e <literal>meuNone</literal> <emphasis role="bold">não</emphasis> são a mesma coisa. Perceba o <literal>n</literal> minúsculo no primeiro e o <literal>N</literal> maiúsculo no segundo.
+
+                                <!--
 				Identifier names are case-sensitive. For example, <literal>myname</literal>
 				and <literal>myName</literal> are <emphasis role="bold">not</emphasis> the
 				same. Note the lowercase <literal>n</literal> in the former and the
 				uppercase <literal>N</literal> in te latter.
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-				
+				Exemplos de nomes de identificadores <emphasis>válidos</emphasis> são <literal>i</literal>, <literal>__meu_nome</literal>, <literal>nome_23</literal> e <literal>a1b2_c3</literal>.
+
+                                <!--
 				Examples of <emphasis>valid</emphasis> identifier names are
 				<literal>i</literal>, <literal>__my_name</literal>, <literal>name_23</literal>
 				and <literal>a1b2_c3</literal>.
-				
+				-->
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-				
+			        Exemplos de nomes de identificadores <emphasis>inválidos</emphasis> são	<literal>2coisas</literal>, <literal>este está espaçado</literal> e <literal>meu-nome</literal>.
+                                
+                                <!--
 				Examples of <emphasis>invalid</emphasis> identifier names are
 				<literal>2things</literal>, <literal>this is spaced out</literal>
 				and <literal>my-name</literal>.
-				
+				-->
 				</para>
 			</listitem>
 		</itemizedlist>
