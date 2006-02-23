@@ -402,85 +402,98 @@ This is the second sentence."
 	</section>
 	
 	<section id="data-types">
-		<title>Data Types</title>
+		<title>Tipos de Dados <!--Data Types--></title>
 		
 		<para>
-		
-		Variables can hold values of different types called <emphasis role="bold">data
+		As variáveis podem guardar valores de diferentes tipos, os chamados <emphasis role="bold">tipos de dados</emphasis>. Os tipos básicos são os números e as strings, sobre os quais já discutimos. Nos capítulos posteriores, veremos como criar nossos próprios tipos usando <link linkend="oops">classes</link>.
+
+		<!--
+                Variables can hold values of different types called <emphasis role="bold">data
 		types</emphasis>. The basic types are numbers and strings, which we have already
 		discussed. In later chapters, we will see how to create our own types using
 		<link linkend="oops">classes</link>.
+                -->
 		
 		</para>
 	</section>
 	<section id="data-type-object">
-		<title>Objects</title>
+		<title>Objetos<!--Objects--></title>
 		<para>
-		
-		Remember, Python refers to anything used in a program as an <emphasis>object</emphasis>.
+		Lembre-se: Python considera qualquer coisa usada em um programa como sendo um <emphasis>objeto</emphasis>. Isto vale em sentido genérico. Ao invés de dizermos 'o <emphasis>alguma coisa</emphasis>', dizemos 'o <emphasis>objeto</emphasis>'.
+
+		<!--
+                Remember, Python refers to anything used in a program as an <emphasis>object</emphasis>.
 		This is meant in the generic sense. Instead of saying 'the <emphasis>something</emphasis>',
 		we say 'the <emphasis>object</emphasis>'.
+                -->
 		
 		</para>
 		
 		<note>
-			<title>Note for Object Oriented Programming users</title>
+			<title>Nota para os usuários de Programação Orientada a Objetos<!--Note for Object Oriented Programming users--></title>
 			<para>
-			
+			Python é fortemente orientada a objetos no sentido de que tudo é um objeto, inclusive números, strings e até mesmo funções.
+                        <!--
 			Python is strongly object-oriented in the sense that everything is an object
 			including numbers, strings and even functions.
-			
+			-->
 			</para>
 		</note>
 		
 		<para>
-		
+                Veremos agora como utilizar variáveis junto com constantes literais. Salve o exemplo a seguir e execute o programa.
+		<!--
 		We will now see how to use variables along with literal constants. Save the following
 		example and run the program.
-		
+		-->
 		</para>
 		
 		<note>
-			<title>How to write Python programs</title>
+			<title>Como escrever programas em Python <!--How to write Python programs--></title>
 			<para>
-			
+			Deste ponto em diante, o procedimento padrão para salvar e executar um programa Python é o seguinte:
+                        <!--
 			Henceforth, the standard procedure to save and run a Python program is as follows:
-			
+			-->
 			</para>
 			
 			<procedure>
 				<step>
 					<para>
-					
+					Abrir seu editor de texto favorito.
+                                        <!--
 					Open your favorite editor.
-					
+					-->
 					</para>
 				</step>
 				<step>
 					<para>
-					
+                                        Digitar o código do programa fornecido no exemplo.
+					<!--
 					Enter the program code given in the example.
-					
+					-->
 					</para>
 				</step>
 				<step>
 					<para>
-					
+                                        Salvá-lo como um arquivo com o nome mencionado no comentário. Eu sigo a convenção de salvar todos os programas Pyhton com a extensão <literal>.py</literal>
+					<!--
 					Save it as a file with the filename mentioned in the comment.
 					I follow the convention of having all Python programs saved with
 					the extension <literal>.py</literal>.
-					
+					-->
 					</para>
 				</step>
 				<step>
 					<para>
-					
-					Run the interpreter with the command
+					Executar o interpretador com o comando <command>python <replaceable>programa.py</replaceable></command> ou usar o IDLE para executar os programas. Você pode ainda usar o <link linkend="executable-python-programs">método executável</link> conforme explicado anteriormente.
+                                       <!--
+                                        Run the interpreter with the command
 					<command>python <replaceable>program.py</replaceable></command> or
 					use IDLE to run the programs. You can also use the
 					<link linkend="executable-python-programs">executable method</link>
 					as explained earlier.
-					
+					-->
 					</para>
 				</step>
 			</procedure>
