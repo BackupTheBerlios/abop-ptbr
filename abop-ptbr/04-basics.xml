@@ -1,4 +1,4 @@
-﻿<chapter id="basics">
+<chapter id="basics">
 	<title>Noções Básicas <!--The Basics--></title>
 
 	<para>
@@ -500,8 +500,21 @@ This is the second sentence."
 		</note>
 		
 		<example>
-			<title>Using Variables and Literal constants</title>
+			<title>Usando Variáveis e Constantes Literais <!--Using Variables and Literal constants--></title>
 			<programlisting>
+			<![CDATA[
+# Nome do arquivo : var.py
+
+i = 5
+print i
+i = i + 1
+print i
+
+s = '''Esta é uma string de múltiplas linhas.
+Esta é a segunda linha.'''
+print s
+			]]>
+			<!--
 			<![CDATA[
 # Filename : var.py
 
@@ -514,12 +527,21 @@ s = '''This is a multi-line string.
 This is the second line.'''
 print s
 			]]>
+			-->
 			</programlisting>
 		</example>
 		
 		<section>
-			<title>Output</title>
+			<title>Saída <!--Output--></title>
 			<screen>
+			<![CDATA[
+$ python var.py
+5
+6
+Esta é uma string de múltiplas linhas.
+Esta é a segunda linha.
+			]]>
+			<!--
 			<![CDATA[
 $ python var.py
 5
@@ -527,14 +549,16 @@ $ python var.py
 This is a multi-line string.
 This is the second line.
 			]]>
+			-->
 			</screen>
 		</section>
 		
 		<section>
-			<title>How It Works</title>
+			<title>Como Funciona? <!--How It Works--></title>
 		
 			<para>
-			
+			Aqui está como este programa funciona. Primeiro, atribuímos o valor literal constante <literal>5</literal> à variável <varname>i</varname> usando o operador de atribuição (<literal>=</literal>). Esta linha é chamada de comando, porque determina que algo deve ser feito e, neste caso, conectamos o nome da variável <literal>i</literal> ao valor <literal>5</literal>. Em seguida, imprimimos o valor de <varname>i</varname> usando o comando <literal>print</literal>, o qual, como era de se esperar, simplesmente imprime o valor da variável na tela.
+			<!--
 			Here's how this program works. First, we assign the literal constant value
 			<literal>5</literal> to the variable <varname>i</varname> using the
 			assignment operator (<literal>=</literal>). This line is called a statement
@@ -543,64 +567,72 @@ This is the second line.
 			Next, we print the value of <varname>i</varname> using the <literal>print</literal>
 			statement which, unsurprisingly, just prints the value of the variable to the
 			screen.
-			
+			-->
 			</para>
 			<para>
+			Então adicionamos <literal>1</literal> ao valor armazenado em <varname>i</varname> e o armazenamos de volta. Nós então o imprimimos e, como era de se esperar, obtemos o valor <literal>6</literal>.
 			
+			<!--
 			The we add <literal>1</literal> to the value stored in <varname>i</varname> and
 			store it back. We then print it and expectedly, we get the value
 			<literal>6</literal>.
-			
+			-->
 			</para>
 			<para>
-			
+			De modo semelhante, atribuímos a string literal à variável <varname>s</varname> e então a imprimimos.
+			<!--
 			Similarly, we assign the literal string to the variable <varname>s</varname>
 			and then print it.
-			
+			-->
 			</para>
 			
 			<note>
-				<title>Note for C/C++ Programmers</title>
+				<title>Nota para programadores C/C++ <!--Note for C/C++ Programmers--></title>
 				
 				<para>
-				
+			Variáveis são utilizadas apenas atribuindo um valor a elas. Não é necessária nenhuma declaração ou definição de tipo de dado.
+            <!--	
 				Variables are used by just assigning them a value. No declaration or
 				data type definition is needed/used.
-				
+				-->
 				</para>
 			</note>
 		</section>
 	</section>
 	<section id="logical-and-physical-lines">
-		<title>Logical and Physical Lines</title>
+		<title>Linhas Lógicas e Linhas Físicas <!--Logical and Physical Lines--></title>
 		
 		<para>
-		
+		Uma linha física é a que <emphasis>você vê</emphasis> quando escreve um programa. Uma linha lógica é o que o <emphasis>Python vê</emphasis> como um comando único. Python assume implicitamente que cada <emphasis>linha física</emphasis> corresponde a uma <emphasis>linha lógica</emphasis>.
+		<!--
 		A physical line is what you <emphasis>see</emphasis> when you write the program. A
 		logical line is what Python <emphasis>sees</emphasis> as a single statement. Python
 		implicitly assumes that each <emphasis>physical line</emphasis> corresponds to a
 		<emphasis>logical line</emphasis>.
-		
+		-->
 		</para>
 		<para>
-		
+		Um exemplo de linha lógica é uma comando como <literal>print 'Ola Mundo'</literal> - se ele por si só já estava em uma linha (como você vê no editor), então corresponde também a uma linha física.
+		<!--
 		An example of a logical line is a statement like <literal>print 'Hello World'</literal>
 		- if this was on a line by itself (as you see it in an editor), then this also
 		corresponds to a physical line.
-		
+		-->
 		</para>
 		<para>
-		
+		Implicitamente, Python encoraja o uso de um único comando por linha, o que torna o código mais legível.
+		<!--
 		Implicitly, Python encourages the use of a single statement per line which makes code
 		more readable.
-		
+		-->
 		</para>
 		<para>
-		
+		Se você quer especificar mais de uma linha lógica em uma única linha física, então você tem que especificar explicitamente, usando um ponto-e-vírgula (<literal>;</literal>), o que indica o fim de uma linha lógica/comando. Por exemplo, 
+		<!--
 		If you want to specify more than one logical line on a single physical line, then you have
 		to explicitly specify this using a semicolon (<literal>;</literal>) which indicates the
 		end of a logical line/statement. For example,
-		
+		-->
 		</para>
 		<programlisting>
 		<![CDATA[
@@ -610,7 +642,8 @@ print i
 		</programlisting>
 		<para>
 		
-		is effectively same as
+		é o mesmo que
+		<!--is effectively same as-->
 		
 		</para>
 		<programlisting>
@@ -620,8 +653,8 @@ print i;
 		]]>
 		</programlisting>
 		<para>
-		
-		and the same can be written as
+		e o mesmo pode ser escrito como
+		<!--and the same can be written as-->
 		
 		</para>
 		<programlisting>
@@ -630,8 +663,8 @@ i = 5; print i;
 		]]>
 		</programlisting>
 		<para>
-		
-		or even
+		ou mesmo
+		<!--or even-->
 		
 		</para>
 		<programlisting>
