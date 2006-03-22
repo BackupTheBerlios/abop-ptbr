@@ -1,5 +1,5 @@
 <chapter id="basics">
-	<title>Noções Básicas <!--The Basics--></title>
+	<title>O Básico <!--The Basics--></title>
 
 	<para>
 	Apenas mostrar um "Hello World" não é o suficiente, não é? Você quer fazer mais que isso. Você quer receber alguma entrada, manipulá-la e obter uma saída. Em Python, podemos fazer isso usando constantes e variáveis.
@@ -673,42 +673,53 @@ i = 5; print i
 		]]>
 		</programlisting>
 		<para>
-		
+		Entretando, eu <emphasis role="bold">recomendo fortemente</emphasis> que você se acostume a <emphasis role="bold">apenas escrever uma única linha lógica em uma única linha física</emphasis>. Use mais de uma linha física para cada linha lógica apenas se a linha lógica for realmente muito longa. A idéia é evitar ao máximo o ponto-e-vírgula, tornando o código mais legível. Na verdade, eu <emphasis>nunca</emphasis> usei ou mesmo vi um ponto-e-vígula em um programa Python.
+		<!--
 		However, I <emphasis role="bold">strongly recommend</emphasis> that you stick to
 		<emphasis role="bold">writing a single logical line in a single physical line
 		only</emphasis>. Use more than one physical line for a single logical line only
 		if the logical line is really long. The idea is to avoid the semicolon as far as
 		possible since it leads to more readable code. In fact, I have <emphasis>never</emphasis>
 		used or even seen a semicolon in a Python program.
-		
+		-->
 		</para>
 		<para>
-		
+		Segue um exemplo da escrita de uma linha lógica em várias linhas físicas. Isto é chamado de <emphasis role="bold">junção explícita de linhas</emphasis>.
+		<!--
 		An example of writing a logical line spanning many physical lines follows. This is
 		referred to as <emphasis role="bold">explicit line joining</emphasis>.
-		
+		-->
 		</para>
 		<programlisting>
+		<![CDATA[
+s = 'Isto é uma string. \
+Isto continua a string.'
+print s
+		]]>
+		<!--
 		<![CDATA[
 s = 'This is a string. \
 This continues the string.'
 print s
 		]]>
+		-->
 		</programlisting>
 		<para>
-		
+		Isto dá a saída:
+		<!--
 		This gives the output:
-		
+		-->
 		</para>
 		<screen>
 		<![CDATA[
-This is a string. This continues the string.
+Isto é uma string. Isto continua a string.
 		]]>
 		</screen>
 		<para>
-		
+		De maneira similar,
+		<!--
 		Similarly,
-		
+		-->
 		</para>
 		<programlisting>
 		<![CDATA[
@@ -717,9 +728,10 @@ i
 		]]>
 		</programlisting>
 		<para>
-		
+		É o mesmo que
+		<!--
 		is the same as
-		
+		-->
 		</para>
 		<programlisting>
 		<![CDATA[
@@ -727,25 +739,27 @@ print i
 		]]>
 		</programlisting>
 		<para>
-		
+		Às vezes há uma suposição implícita de onde você não precisa usar uma barra invertida. São os casos onde a linha lógica usa parênteses, colchetes ou chaves. Isto é chamado de <emphasis role="bold">junção implícita de linhas</emphasis>.  Você poderá vê-la em ação nos capítulos posteriores, quando escrevermos programas que utilizam <link linkend="list">listas</link>.
+		<!--
 		Sometimes, there is an implicit assumption where you don't need to use a backslash. This
 		is the case where the logical line uses parentheses, square brackets or curly braces. This
 		is is called <emphasis role="bold">implicit line joining</emphasis>.  You can see this in
 		action when we write programs using <link linkend="list">lists</link> in later chapters.
-		
+		-->
 		</para>
 	</section>
 	<section id="indentation">
-		<title>Indentation</title>
+		<title>Indentação <!--Indentation--></title>
 		
 		<para>
-		
+		Os espaços em branco são importantes em Python. Na verdade, <emphasis role="bold">espaços em branco no início das linhas são importantes</emphasis>. Isto é chamado de <emphasis role="bold">indentação</emphasis>. Espaços em branco (tabulações e espaços) no início de uma linha lógica são utilizados para determinar o agrupamento de comandos.
+		<!--
 		Whitespace is important in Python. Actually, <emphasis role="bold">whitespace at the
 		beginning of the line is important</emphasis>. This is called
 		<emphasis role="bold">indentation</emphasis>. Leading whitespace (spaces and tabs) at
 		the beginning of the logical line is used to determine the indentation level of the
 		logical line, which in turn is used to determine the grouping of statements.
-		
+		-->
 		</para>
 		<para>
 		
