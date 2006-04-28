@@ -762,41 +762,60 @@ print i
 		-->
 		</para>
 		<para>
-		
+		Isto significa que comandos que estão juntos <emphasis role="bold">devem</emphasis>	ter a mesma indentação. Cada conjunto de tais comandos é chamado de <emphasis role="bold">bloco</emphasis>. Veremos exemplos da importância dos blocos nos capítulos seguintes.
+		<!--
 		This means that statements which go together <emphasis role="bold">must</emphasis>
 		have the same indentation. Each such set of statements is called a
 		<emphasis role="bold">block</emphasis>. We will see examples of how blocks are
 		important in later chapters.
-		
+		-->
 		</para>
 		<para>
-		
+		Uma coisa que você devem lembrar é de como a indentação errada pode ocasionar erros. Por exemplo:
+		<!--
 		One thing you should remember is how wrong indentation can give rise to errors.
 		For example:
-		
+		-->
 		</para>
 		<programlisting>
+		<![CDATA[
+i = 5
+ print 'O valor é ', i # Erro! Perceba um único espaço no início da linha
+print 'Eu repito, o valor é ', i
+		]]>
+		<!--
 		<![CDATA[
 i = 5
  print 'Value is', i # Error! Notice a single space at the start of the line
 print 'I repeat, the value is', i
 		]]>
+		-->
 		</programlisting>
 		<para>
-		
+		Quando você executa isto, ocorre o seguinte erro:
+		<!--
 		When you run this, you get the following error:
-		
+		-->
 		</para>
 		<screen>
+		<![CDATA[
+  File "whitespace.py", line 4
+    print 'O valor é ', i # Erro! Perceba um único espaço no início da linha
+    ^
+SyntaxError: invalid syntax
+		]]>
+		<!--
 		<![CDATA[
   File "whitespace.py", line 4
     print 'Value is', i # Error! Notice a single space at the start of the line
     ^
 SyntaxError: invalid syntax
 		]]>
+		-->
 		</screen>
 		<para>
-		
+		Perceba que existe um espaço em branco no início da segunda linha. O erro apontado pelo Python nos diz que a sintaxe do programa é inválida, isto é, o programa não está escrito de maneira adequada. O que isto siginifica para você é que <emphasis>você não pode iniciar novos blocos de comandos arbitrariamente</emphasis> (exceto pelo bloco principal que você já vinha usando, é claro). Os casos onde você pode iniciar novos blocos serão detalhados em capítulos posteriores tais como <link linkend="control-flow">o capítulo sobre fluxos de controle</link>.
+		<!--
 		Notice that there is a single space at the beginning of the second line. The error
 		indicated by Python tells us that the syntax of the program is invalid i.e. the
 		program was not properly written. What this means to you is that <emphasis>you cannot
@@ -804,37 +823,39 @@ SyntaxError: invalid syntax
 		you have been using all along, of course). Cases where you can use new blocks will be
 		detailed in later chapters such as the <link linkend="control-flow">control flow
 		chapter</link>.
-		
+		-->
 		</para>
 		<important>
-			<title>How to indent</title>
+			<title>Como indentar <!--How to indent--></title>
 			<para>
-			
-			Do <emphasis role="bold">not</emphasis> use a mixture of tabs and spaces for
+			<emphasis role="bold">Não</emphasis> utilize uma mistura de tabulações e espaços para a indentação, uma vez que isto não funciona apropriadamente entre diferentes plataformas. Eu <emphasis>recomendo fortemente</emphasis> que você use uma <emphasis>única tabulação</emphasis> ou <emphasis>dois ou quatro espaços</emphasis> para cada nível de indentação.
+			<!--Do <emphasis role="bold">not</emphasis> use a mixture of tabs and spaces for
 			the indentation as it does not work across different platforms properly. I
 			<emphasis>strongly recommend</emphasis> that you use a
 			<emphasis>single tab</emphasis> or <emphasis>two or four spaces</emphasis> for
 			each indentation level.
-			
+			-->
 			</para>
 			<para>
-			
+			Escolha qualquer um destes três estilos de indentação. O mais importante é escolher um e utilizá-lo <emphasis role="bold">consistentemente</emphasis>, isto é, use <emphasis>apenas</emphasis> o estilo escolhido.
+		<!--	
 			Choose any of these three indentation styles. More importantly, choose one and
 			use it <emphasis role="bold">consistently</emphasis> i.e. use that indentation
 			style <emphasis>only</emphasis>.
-			
+			-->
 			</para>
 		</important>
 	</section>
 	<section id="basics-summary">
-		<title>Summary</title>
+		<title>Resumo <!--Summary--></title>
 		
 		<para>
-		
+		Agora que vimos muitos pequenos detalhes, podemos passar para coisas mais interessantes, tais como os comandos de controle de fluxo. Certifique-se de que esteja se sentindo confortável com o que foi visto neste capítulo.
+		<!--
 		Now that we have gone through many nitty-gritty details, we can move on to more
 		interesting stuff such as control flow statements. Be sure to become comfortable with
 		what you have read in this chapter.
-		
+		-->
 		</para>
 	</section>
 </chapter>
