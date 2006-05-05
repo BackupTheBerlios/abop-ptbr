@@ -1,41 +1,61 @@
 <chapter id="operators-expressions">
-	<title>Operators and Expressions</title>
+	<title>Operadores e Expressões <!--Operators and Expressions--></title>
 	
 	<section id="operators-expressions-intro">
-		<title>Introduction</title>
+		<title>Introdução <!--Introduction--></title>
 		
 		<para>
 		
+        A maioria dos comandos (linhas lógicas) que você irá escrever contêm		
+		<emphasis role="bold">expressões</emphasis>. Um exemplo simples de expressão é        
+		<literal>2 + 3</literal>. Uma expressão pode ser subdividida em operadores e operandos.
+		
+        <!--
 		Most statements (logical lines) that you write will contain
 		<emphasis role="bold">expressions</emphasis>. A simple example of an expression is
 		<literal>2 + 3</literal>. An expression can be broken down into operators and operands.
+		-->
 		
-		</para>
+        </para>
 		<para>
+
+		<emphasis>Operadores</emphasis> são funcionalidades que fazem algo e podem ser        
+		representados por símbolos tais como <literal>+</literal> ou por palavras-chave especiais. Operadores
+		requerem dados sobre os quais operar. Estes dados são chamados <emphasis>operandos</emphasis>.
+		Neste caso, <literal>2</literal> e <literal>3</literal> são os operandos.
 		
+		<!--
 		<emphasis>Operators</emphasis> are functionality that do something and can be
 		represented by symbols such as <literal>+</literal> or by special keywords. Operators
 		require some data to operate on and such data are called <emphasis>operands</emphasis>.
 		In this case, <literal>2</literal> and <literal>3</literal> are the operands.
-		
+		-->
 		</para>
 	</section>
 	
 	<section id="operators">
-		<title>Operators</title>
+		<title>Operadores <!--Operators--></title>
 		
 		<para>
+		Daremos uma breve olhada nos operadores e na sua utilização:
 		
-		We will briefly take a look at the operators and their usage:
+		<!--
+        We will briefly take a look at the operators and their usage:
+		-->
 		
 		</para>
 		<tip>
 			<para>
 			
+			Você pode avaliar as expressões mostradas nos exemplos usando o interpretador
+			interativamente. Por exemplo, para testar a expressão <literal>2 + 3</literal>, use
+			o prompt do interpretador interativo do Python:
+			
+			<!--
 			You can evaluate the expressions given in the examples using the interpreter
 			interactively. For example, to test the expression <literal>2 + 3</literal>, use
 			the interactive Python interpreter prompt:
-			
+			-->
 			</para>
 			<screen>
 			<![CDATA[
@@ -49,143 +69,152 @@
 		</tip>
 		
 		<table>
-			<title>Operators and their usage</title>
+			<title>Operadores e sua utilização <!--Operators and their usage--></title>
 			<tgroup cols="4">
 				<thead>
 					<row>
-						<entry>Operator</entry>
-						<entry>Name</entry>
-						<entry>Explanation</entry>
-						<entry>Examples</entry>
+						<entry>Operador <!--Operator--></entry>
+						<entry>Nome <!--Name--></entry>
+						<entry>Descrição <!--Explanation--></entry>
+						<entry>Exemplos <!--Examples--></entry>
 					</row>
 				</thead>
 				<tbody>
 					<row>
 						<entry>+</entry>
-						<entry>Plus</entry>
+						<entry>Soma <!--Plus--></entry>
 						<entry>
-						
+						Soma dois objetos
+						<!--
 						Adds the two objects
-						
+						-->
 						</entry>
 						<entry>
 						
-						<literal>3 + 5</literal> gives <literal>8</literal>.
-						<literal>'a' + 'b'</literal> gives <literal>'ab'</literal>.
+						<literal>3 + 5</literal> retorna <!--gives--> <literal>8</literal>.
+						<literal>'a' + 'b'</literal> retorna <!--gives--> <literal>'ab'</literal>.
 						
 						</entry>
 					</row>
 					<row>
 						<entry>-</entry>
-						<entry>Minus</entry>
+						<entry>Subtração <!--Minus--></entry>
 						<entry>
-						
+						Retorna o número negativo ou a subtração de um número por outro
+						<!--
 						Either gives a negative number or gives the subtraction of
 						one number from the other
-						
+						-->
 						</entry>
 						<entry>
 						
-						<literal>-5.2</literal> gives a negative number.
-						<literal>50 - 24</literal> gives <literal>26</literal>.
+						<literal>-5.2</literal> retorna um número negativo. <!--gives a negative number.-->
+						<literal>50 - 24</literal> retorna <!--gives--> <literal>26</literal>.
 						
 						</entry>
 					</row>
 					<row>
 						<entry>*</entry>
-						<entry>Multiply</entry>
+						<entry>Multiplicação <!--Multiply--></entry>
 						<entry>
-						
+						Retorna a multiplicação de dois números ou retorna a string repetida um determinado número de vezes.
+						<!--
 						Gives the multiplication of the two numbers or returns
 						the string repeated that many times.
-						
+						-->
 						</entry>
 						<entry>
 						
-						<literal>2 * 3</literal> gives <literal>6</literal>.
-						<literal>'la' * 3</literal> gives <literal>'lalala'</literal>.
+						<literal>2 * 3</literal> retorna <!--gives--> <literal>6</literal>.
+						<literal>'la' * 3</literal> retorna <!--gives--> <literal>'lalala'</literal>.
 						
 						</entry>
 					</row>
 					<row>
 						<entry>**</entry>
-						<entry>Power</entry>
+						<entry>Potenciação <!--Power--></entry>
 						<entry>
-						
+						Retorna x elevado à potência de y
+						<!--
 						Returns x to the power of y
-						
+						-->
 						</entry>
 						<entry>
 						
-						<literal>3 ** 4</literal> gives <literal>81</literal>
+						<literal>3 ** 4</literal> retorna <!--gives--> <literal>81</literal>
 						(i.e. <literal>3 * 3 * 3 * 3</literal>)
 						
 						</entry>
 					</row>
 					<row>
 						<entry>/</entry>
-						<entry>Divide</entry>
+						<entry>Divisão <!--Divide--></entry>
 						<entry>
-						
+						Divide x por y
+						<!--
 						Divide x by y
-						
+						-->>
 						</entry>
 						<entry>
 						
-						<literal>4/3</literal> gives <literal>1</literal> (division
-						of integers gives an integer).
-						<literal>4.0/3</literal> or <literal>4/3.0</literal> gives
+						<literal>4/3</literal> retorna <!--gives--> <literal>1</literal> (divisão de
+                        inteiros retorna um inteiro). <!--(division	of integers gives an integer).-->
+						<literal>4.0/3</literal> ou <!--or--> <literal>4/3.0</literal> retorna <!--gives-->
 						<literal>1.3333333333333333</literal>
 						
 						</entry>
 					</row>
 					<row>
 						<entry>//</entry>
-						<entry>Floor Division</entry>
+						<entry>Divisão Inteira (Floor Division) <!--Floor Division--></entry>
 						<entry>
-						
+						Retorna a parte inteira do quociente, sem parte decimal ou resto
+						<!--
 						Returns the floor of the quotient
-						
+						-->
 						</entry>
 						<entry>
 						
-						<literal>4 // 3.0</literal> gives <literal>1.0</literal>
+						<literal>4 // 3.0</literal> retorna <!--gives--> <literal>1.0</literal>
 						
 						</entry>
 					</row>
 					<row>
 						<entry>%</entry>
-						<entry>Modulo</entry>
+						<entry>Módulo <!--Modulo--></entry>
 						<entry>
-						
+						Retorna o resto da divisão
+						<!--
 						Returns the remainder of the division
-						
+						-->
 						</entry>
 						<entry>
 						
-						<literal>8%3</literal> gives <literal>2</literal>.
-						<literal>-25.5%2.25</literal> gives <literal>1.5</literal> .
+						<literal>8%3</literal> retorna <!--gives--> <literal>2</literal>.
+						<literal>-25.5%2.25</literal> retorna <!--gives--> <literal>1.5</literal> .
 						
 						</entry>
 					</row>
 					<row>
 						<entry><![CDATA[<<]]></entry>
-						<entry>Left Shift</entry>
+						<entry>Deslocamento (shift) à esquerda <!--Left Shift--></entry>
 						<entry>
-						
+						Desloca os bits do número à esquerda pelo número de bits especificado. 
+                        (Cada número é representado na memória através de bits ou dígitos binários, isto é, 0 e 1) 
+						<!--
 						Shifts the bits of the number to the left by the number of
 						bits specified. (Each number is represented in memory by
 						bits or binary digits i.e. 0 and 1)
-						
+						-->
 						</entry>
 						<entry>
 						
-						<literal><![CDATA[2 << 2]]></literal> gives
+						<literal><![CDATA[2 << 2]]></literal> retorna <!--gives-->
 						<literal>8</literal>.
-						- <literal>2</literal> is represented by
-						<literal>10</literal> in bits. Left shifting by 2 bits
-						gives <literal>1000</literal> which represents the
-						decimal <literal>8</literal>.
+						- <literal>2</literal> é representado por <!--is represented by-->
+						<literal>10</literal> em bits <!--in bits-->. Deslocar 2 bits à esquerda retorna
+                        <!-- Left shifting by 2 bits gives --> <literal>1000</literal> que representa o decimal
+                        <!--which represents the decimal--> <literal>8</literal>.
 						
 						</entry>
 					</row>
